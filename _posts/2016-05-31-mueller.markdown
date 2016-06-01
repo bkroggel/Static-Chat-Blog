@@ -1,0 +1,23 @@
+---
+permalink: /mueller/
+layout: messages
+link: mueller
+name: Thomas Müller
+face: mueller.jpg
+
+historys:
+    - date: 31.05.2016
+      messages:
+        - name: Müller
+          contents:
+            - text: Wups, hallo hier und da draußen.
+              time: "21:09"
+    - date: 01.06.2016
+      messages:
+        - name: me
+          contents:
+            - text: So, damit auch beim Thomas was am 01. Juni geschreiben steht.
+              time: "20:13"
+
+    
+---

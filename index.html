@@ -1,0 +1,69 @@
+---
+---
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>WhatsApp Studie | MDL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="assets/scripts/script.js"></script>
+    
+    
+
+    
+    
+    
+  </head>
+
+  <body>
+    <section class="app-wrapper">
+      <div class="app mdl-card">
+        <div class="pane pane-one">
+          <header>
+            <div class="face-icon">
+              
+            </div>
+            <div class="menu">
+              <button class="mdl-button mdl-js-button">
+                <span>
+                  <svg class="new-message" xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="chat" x="689" y="687">
+                    <path opacity=".5" fill-rule="evenodd" clip-rule="evenodd" d="M19.005 3.175H4.675C3.64 3.175 3 3.79 3 4.82v16.2l3.544-3.514h12.46c1.034 0 2.065-1.06 2.065-2.093V4.82c-.004-1.03-1.035-1.645-2.067-1.645zm-4.99 9.87H7.042V11.1h6.976v1.944zm3-4H7.042V7.1h9.976v1.944z"/>
+                  </svg>
+                </span>
+              </button>
+              
+              <button id="menu1" class="mdl-button mdl-js-button mdl-button--icon">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="menu" x="1947" y="1961">
+                    <path d="M12 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" opacity=".5"/>
+                  </svg>
+                </span>
+              </button>
+              <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                  for="menu1">
+                <li class="mdl-menu__item">Some Action</li>
+                <li class="mdl-menu__item">Another Action</li>
+                <li disabled class="mdl-menu__item">Disabled Action</li>
+                <li class="mdl-menu__item">Yet Another Action</li>
+              </ul>
+            </div>
+          </header>
+          {% include list.html %}
+        </div>
+        <div class="pane pane-two" id="message-window">
+          {% include blank.html %}
+          <!-- <section class="text-field">
+            
+          </section> -->
+        </div>
+      </div>
+    </section>
+    {% include js.html %}
+  </body>
+</html>

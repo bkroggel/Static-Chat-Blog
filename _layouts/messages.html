@@ -1,0 +1,32 @@
+<!-- {% include head.html %}  -->
+{% include chat.html %}
+
+<script>
+  
+$(document).ready(function(){
+  $(function(){ 
+    $(".background-frame").scrollTop($(".background-frame")[0].scrollHeight);
+  });
+  $(function(){
+    var jekyllDate = $("#date-chat").text();
+    var date = jekyllDate.substring(0, 2);
+    var month = jekyllDate.substring(3, 5);
+    var year = jekyllDate.substring(6, 10);
+    var myDate = new Date(year, month - 1, date);
+    var today = new Date();
+    myDate.setHours(0,0,0,0);
+    today.setHours(0,0,0,0);
+    if(myDate.getTime() === today.getTime() ) {
+      $(function(){
+        $(".header-info h2 .not-today").remove();
+        $(".header-info .today").css("display", "inline-block");
+      });
+    } else {
+      $(function(){
+
+      }); 
+    };
+  });
+});
+
+</script>
