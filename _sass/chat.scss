@@ -1,3 +1,8 @@
+.chat-window {
+  height: 100%;
+  width: 100%;
+}
+
 .header-chat {
   height: 59px;
   width: 100%;
@@ -49,6 +54,7 @@
   height: calc(100% - 121px);
   overflow:scroll;
   overflow-x:hidden;
+  width: 100%;
 }
 .message-list {
   display: flex;
@@ -147,6 +153,7 @@ p::after {
   background-color: rgba(255,255,255,.6);
   box-sizing: border-box;
   border-left: 1px solid rgba(0,0,0,.08);
+  border-right: 1px solid rgba(0,0,0,.08);
   height: 62px;
   position: relative;
   width: 100%;

@@ -1,5 +1,9 @@
 <!-- {% include head.html %}  -->
-{% include chat.html %}
+<section class="window-columns">
+  {% include chat.html %}
+  {% include person.html %}
+</section>
+
 
 <script>
   
@@ -26,6 +30,12 @@ $(document).ready(function(){
 
       }); 
     };
+  });
+  $('.header-icon, .header-info').click(function(){
+    $(".window-columns").addClass("open-person");
+  });
+  $('.header-close span').click(function(){
+    $(".window-columns").removeClass("open-person");
   });
 });
 

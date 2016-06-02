@@ -4,6 +4,13 @@ layout: messages
 name: Jerome Boateng
 link: boateng
 face: boateng.jpg
+date: 02.06.2016
+
+twitter: https://twitter.com/jb17official
+facebook: https://www.facebook.com/JeromeBoateng17/
+instagram: https://www.instagram.com/jeromeboateng/
+
+status: Zum Abschied sag ich leise, scheiße!
 
 historys:
     - date: 31.05.2016
@@ -59,7 +66,465 @@ historys:
             -  text: eier, wir brauchen eier
                time: "12:31"
             -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
-               time: "12:32" 
+               time: "12:32"
+        - name: Boateng
+          contents:
+            - text: MC Gauland, is in da House und noch ein wenig mehr zusätzlichen Text. Da geht bestimmt noch mal was.
+              time: "21:09"
+            - text: Hier jetzt ein weiterer Satz dazu.
+              time: "11:29"
+        - name: me
+          contents:
+            -  text: So, das ist jetzt eine eingehende Nachricht
+               time: "11:30"
+            -  text: und natürlich noch ein wenig mehr um zu sehen, dass das auch wirklich funktioniert.
+               time: "12:00" 
+        - name: boateng
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: me
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: boateng
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: me
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: Boateng
+          contents:
+            - text: MC Gauland, is in da House und noch ein wenig mehr zusätzlichen Text. Da geht bestimmt noch mal was.
+              time: "21:09"
+            - text: Hier jetzt ein weiterer Satz dazu.
+              time: "11:29"
+        - name: me
+          contents:
+            -  text: So, das ist jetzt eine eingehende Nachricht
+               time: "11:30"
+            -  text: und natürlich noch ein wenig mehr um zu sehen, dass das auch wirklich funktioniert.
+               time: "12:00" 
+        - name: boateng
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: me
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: boateng
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: me
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: Boateng
+          contents:
+            - text: MC Gauland, is in da House und noch ein wenig mehr zusätzlichen Text. Da geht bestimmt noch mal was.
+              time: "21:09"
+            - text: Hier jetzt ein weiterer Satz dazu.
+              time: "11:29"
+        - name: me
+          contents:
+            -  text: So, das ist jetzt eine eingehende Nachricht
+               time: "11:30"
+            -  text: und natürlich noch ein wenig mehr um zu sehen, dass das auch wirklich funktioniert.
+               time: "12:00" 
+        - name: boateng
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: me
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: boateng
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: me
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+    - date: 02.06.2016
+      messages:
+        - name: Boateng
+          contents:
+            - text: Heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee!
+              time: "21:09"
+            - text: Hier jetzt ein weiterer Satz dazu.
+              time: "11:29"
+        - name: me
+          contents:
+            -  text: So, das ist jetzt eine eingehende Nachricht
+               time: "11:30"
+            -  text: und natürlich noch ein wenig mehr um zu sehen, dass das auch wirklich funktioniert.
+               time: "12:00" 
+        - name: boateng
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: me
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: boateng
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: me
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: Boateng
+          contents:
+            - text: MC Gauland, is in da House und noch ein wenig mehr zusätzlichen Text. Da geht bestimmt noch mal was.
+              time: "21:09"
+            - text: Hier jetzt ein weiterer Satz dazu.
+              time: "11:29"
+        - name: me
+          contents:
+            -  text: So, das ist jetzt eine eingehende Nachricht
+               time: "11:30"
+            -  text: und natürlich noch ein wenig mehr um zu sehen, dass das auch wirklich funktioniert.
+               time: "12:00" 
+        - name: boateng
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: me
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: boateng
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: me
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: Boateng
+          contents:
+            - text: MC Gauland, is in da House und noch ein wenig mehr zusätzlichen Text. Da geht bestimmt noch mal was.
+              time: "21:09"
+            - text: Hier jetzt ein weiterer Satz dazu.
+              time: "11:29"
+        - name: me
+          contents:
+            -  text: So, das ist jetzt eine eingehende Nachricht
+               time: "11:30"
+            -  text: und natürlich noch ein wenig mehr um zu sehen, dass das auch wirklich funktioniert.
+               time: "12:00" 
+        - name: boateng
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: me
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: boateng
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: me
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: Boateng
+          contents:
+            - text: MC Gauland, is in da House und noch ein wenig mehr zusätzlichen Text. Da geht bestimmt noch mal was.
+              time: "21:09"
+            - text: Hier jetzt ein weiterer Satz dazu.
+              time: "11:29"
+        - name: me
+          contents:
+            -  text: So, das ist jetzt eine eingehende Nachricht
+               time: "11:30"
+            -  text: und natürlich noch ein wenig mehr um zu sehen, dass das auch wirklich funktioniert.
+               time: "12:00" 
+        - name: boateng
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: me
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: boateng
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: me
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdj
+               time: "15:32"
+        - name: boateng
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: me
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: boateng
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: me
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: Boateng
+          contents:
+            - text: MC Gauland, is in da House und noch ein wenig mehr zusätzlichen Text. Da geht bestimmt noch mal was.
+              time: "21:09"
+            - text: Hier jetzt ein weiterer Satz dazu.
+              time: "11:29"
+        - name: me
+          contents:
+            -  text: So, das ist jetzt eine eingehende Nachricht
+               time: "11:30"
+            -  text: und natürlich noch ein wenig mehr um zu sehen, dass das auch wirklich funktioniert.
+               time: "12:00" 
+        - name: boateng
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: me
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: boateng
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
+               time: "12:32"
+        - name: me
+          contents:
+            -  text: jetzt hier mal noch ein wenig inhalt
+               time: "12:30"
+            -  text: so, dass ist jetzt hier etwas anderes
+               time: "12:00"
+            -  text: eier, wir brauchen eier
+               time: "12:31"
+            -  text: jdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdj
+               time: "15:32"    
 
     
 ---

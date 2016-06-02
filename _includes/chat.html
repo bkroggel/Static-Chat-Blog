@@ -1,58 +1,60 @@
-<header class="header-chat">
-  <div class="face-icon header-icon">
-    <img src="../assets/img/face/{{page.face}}" alt="{{page.face}}">
-  </div>
-  <div class="header-info">
-    <h1>
-      {{page.name}}
-    </h1>
-    <h2>zuletzt online 
-      <span class="not-today">am</span>
-      <span id="date-chat" class="not-today">{% assign historys = page.historys | sort: 'some_field' | reverse %}{% for history in historys limit:1 %}{{history.date}}{% endfor %}</span>
-      <span class="today">
-        {% assign historys = page.historys | sort: 'some_field' | reverse %}{% for history in historys limit:1 %}{% assign messages = history.messages | sort: 'some_field' | reverse %}{% for message in messages limit:1%}{% assign contents = message.contents | sort: 'some_field' | reverse %}{% for content in contents limit:1%}heute {{content.time}}{% endfor %}{% endfor %}{% endfor %}
-      </span>
-  </div>
-  <div class="menu">
-    <div class="menu-item">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="clip" x="861" y="875"><path opacity=".4" d="M1.816 15.556v.002c0 1.502.584 2.912 1.646 3.972a5.59 5.59 0 0 0 3.974 1.647c1.5 0 2.91-.584 3.972-1.645l9.547-9.548c.77-.768 1.147-1.767 1.058-2.817-.08-.968-.548-1.927-1.32-2.698-1.593-1.595-4.067-1.714-5.516-.265L7.26 12.122c-.88.88-.79 2.25.215 3.26.96.96 2.423 1.054 3.263.216l5.51-5.512c.28-.28.268-.722.054-.936l-.244-.244c-.19-.19-.567-.35-.957.04-1.696 1.7-5.503 5.506-5.503 5.506-.18.18-.635.127-.976-.214-.1-.097-.576-.613-.213-.973l7.915-7.917c.82-.817 2.27-.7 3.23.262.5.5.804 1.1.85 1.685.05.573-.155 1.11-.59 1.543l-9.545 9.55a3.97 3.97 0 0 1-2.83 1.17 3.975 3.975 0 0 1-2.83-1.173 3.973 3.973 0 0 1-1.17-2.828c0-1.07.414-2.076 1.17-2.83l7.21-7.21c.157-.158.264-.58.028-.815L11.5 4.36a.572.572 0 0 0-.834.018L3.46 11.585a5.577 5.577 0 0 0-1.644 3.97z"/>
-      </svg>
+<section class="chat-window">
+  <header class="header-chat">
+    <div class="face-icon header-icon">
+      <img src="../assets/img/face/{{page.face}}" alt="{{page.face}}">
     </div>
-    <div class="menu-item">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="menu" x="1947" y="1961"><path d="M12 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" opacity=".5"/></svg>
+    <div class="header-info">
+      <h1>
+        {{page.name}}
+      </h1>
+      <h2>zuletzt online 
+        <span class="not-today">am</span>
+        <span id="date-chat" class="not-today">{% assign historys = page.historys | sort: 'some_field' | reverse %}{% for history in historys limit:1 %}{{history.date}}{% endfor %}</span>
+        <span class="today">
+          {% assign historys = page.historys | sort: 'some_field' | reverse %}{% for history in historys limit:1 %}{% assign messages = history.messages | sort: 'some_field' | reverse %}{% for message in messages limit:1%}{% assign contents = message.contents | sort: 'some_field' | reverse %}{% for content in contents limit:1%}heute {{content.time}}{% endfor %}{% endfor %}{% endfor %}
+        </span>
     </div>
-  </div>
-</header>
+    <div class="menu">
+      <div class="menu-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="clip" x="861" y="875"><path opacity=".4" d="M1.816 15.556v.002c0 1.502.584 2.912 1.646 3.972a5.59 5.59 0 0 0 3.974 1.647c1.5 0 2.91-.584 3.972-1.645l9.547-9.548c.77-.768 1.147-1.767 1.058-2.817-.08-.968-.548-1.927-1.32-2.698-1.593-1.595-4.067-1.714-5.516-.265L7.26 12.122c-.88.88-.79 2.25.215 3.26.96.96 2.423 1.054 3.263.216l5.51-5.512c.28-.28.268-.722.054-.936l-.244-.244c-.19-.19-.567-.35-.957.04-1.696 1.7-5.503 5.506-5.503 5.506-.18.18-.635.127-.976-.214-.1-.097-.576-.613-.213-.973l7.915-7.917c.82-.817 2.27-.7 3.23.262.5.5.804 1.1.85 1.685.05.573-.155 1.11-.59 1.543l-9.545 9.55a3.97 3.97 0 0 1-2.83 1.17 3.975 3.975 0 0 1-2.83-1.173 3.973 3.973 0 0 1-1.17-2.828c0-1.07.414-2.076 1.17-2.83l7.21-7.21c.157-.158.264-.58.028-.815L11.5 4.36a.572.572 0 0 0-.834.018L3.46 11.585a5.577 5.577 0 0 0-1.644 3.97z"/>
+        </svg>
+      </div>
+      <div class="menu-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="menu" x="1947" y="1961"><path d="M12 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" opacity=".5"/></svg>
+      </div>
+    </div>
+  </header>
 
-<div class="background-frame">
-  <section class="message-list" id="message-list">
-    {% for history in page.historys %}
-      {% for message in history.messages %}
-        <div class="bubble-row">
-          {% for content in message.contents %}
-          <div class="bubble-frame">
-            <div class="bubble {% if {{message.name}} == 'me' %}bubble-out{% else %}bubble-in{% endif %}">
-              <p>{{content.text}}</p>
-              <h3>{{content.time}}</h3>
+  <div class="background-frame">
+    <section class="message-list" id="message-list">
+      {% for history in page.historys %}
+        {% for message in history.messages %}
+          <div class="bubble-row">
+            {% for content in message.contents %}
+            <div class="bubble-frame">
+              <div class="bubble {% if {{message.name}} == 'me' %}bubble-out{% else %}bubble-in{% endif %}">
+                <p>{{content.text}}</p>
+                <h3>{{content.time}}</h3>
+              </div>
             </div>
+            {% endfor %}
           </div>
-          {% endfor %}
-        </div>
+        {% endfor %}
       {% endfor %}
-    {% endfor %}
-  </section>
-</div>
-<footer class="footer-chat">
-  <div class="footer-frame">
-    <div class="footer-emoji footer-emoji-left">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="smiley" x="3147" y="3209"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.153 11.603c.795 0 1.44-.88 1.44-1.962s-.645-1.96-1.44-1.96c-.795 0-1.44.88-1.44 1.96s.645 1.965 1.44 1.965zM5.95 12.965c-.027-.307-.132 5.218 6.062 5.55 6.066-.25 6.066-5.55 6.066-5.55-6.078 1.416-12.13 0-12.13 0zm11.362 1.108s-.67 1.96-5.05 1.96c-3.506 0-5.39-1.165-5.608-1.96 0 0 5.912 1.055 10.658 0zM11.804 1.01C5.61 1.01.978 6.034.978 12.23s4.826 10.76 11.02 10.76S23.02 18.424 23.02 12.23c0-6.197-5.02-11.22-11.216-11.22zM12 21.355c-5.273 0-9.38-3.886-9.38-9.16 0-5.272 3.94-9.547 9.214-9.547a9.548 9.548 0 0 1 9.548 9.548c0 5.272-4.11 9.16-9.382 9.16zm3.108-9.75c.795 0 1.44-.88 1.44-1.963s-.645-1.96-1.44-1.96c-.795 0-1.44.878-1.44 1.96s.645 1.963 1.44 1.963z" opacity=".4"/></svg>
-    </div>
-    <div class="footer-input">
-      <textarea rows="1" placeholder="Schreibe eine Nachricht"></textarea>
-    </div>
-    <div class="footer-emoji footer-emoji-right">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="ptt" x="2577" y="2589"><path opacity=".4" d="M12 14.942c2 0 3.53-1.53 3.53-3.53V4.35c0-2-1.53-3.53-3.53-3.53S8.47 2.35 8.47 4.35v7.06c0 2.002 1.53 3.532 3.53 3.532zm6.237-3.53c0 3.53-2.942 6.002-6.237 6.002s-6.237-2.47-6.237-6.002H3.76c0 4 3.18 7.297 7.062 7.885v3.884h2.354V19.3c3.884-.588 7.06-3.884 7.06-7.885h-2z"/></svg>
-    </div>
-    
+    </section>
   </div>
-</footer>
+  <footer class="footer-chat">
+    <div class="footer-frame">
+      <div class="footer-emoji footer-emoji-left">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="smiley" x="3147" y="3209"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.153 11.603c.795 0 1.44-.88 1.44-1.962s-.645-1.96-1.44-1.96c-.795 0-1.44.88-1.44 1.96s.645 1.965 1.44 1.965zM5.95 12.965c-.027-.307-.132 5.218 6.062 5.55 6.066-.25 6.066-5.55 6.066-5.55-6.078 1.416-12.13 0-12.13 0zm11.362 1.108s-.67 1.96-5.05 1.96c-3.506 0-5.39-1.165-5.608-1.96 0 0 5.912 1.055 10.658 0zM11.804 1.01C5.61 1.01.978 6.034.978 12.23s4.826 10.76 11.02 10.76S23.02 18.424 23.02 12.23c0-6.197-5.02-11.22-11.216-11.22zM12 21.355c-5.273 0-9.38-3.886-9.38-9.16 0-5.272 3.94-9.547 9.214-9.547a9.548 9.548 0 0 1 9.548 9.548c0 5.272-4.11 9.16-9.382 9.16zm3.108-9.75c.795 0 1.44-.88 1.44-1.963s-.645-1.96-1.44-1.96c-.795 0-1.44.878-1.44 1.96s.645 1.963 1.44 1.963z" opacity=".4"/></svg>
+      </div>
+      <div class="footer-input">
+        <textarea rows="1" placeholder="Schreibe eine Nachricht"></textarea>
+      </div>
+      <div class="footer-emoji footer-emoji-right">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="ptt" x="2577" y="2589"><path opacity=".4" d="M12 14.942c2 0 3.53-1.53 3.53-3.53V4.35c0-2-1.53-3.53-3.53-3.53S8.47 2.35 8.47 4.35v7.06c0 2.002 1.53 3.532 3.53 3.532zm6.237-3.53c0 3.53-2.942 6.002-6.237 6.002s-6.237-2.47-6.237-6.002H3.76c0 4 3.18 7.297 7.062 7.885v3.884h2.354V19.3c3.884-.588 7.06-3.884 7.06-7.885h-2z"/></svg>
+      </div>
+      
+    </div>
+  </footer>
+</section>
