@@ -8,18 +8,26 @@
         <div class="first-line">
           <h1>{{post.name}}</h1>
           <h2>
-            <span class="date-{{post.link}}" id="date-{{post.link}}">{% assign historys = post.historys | sort: 'some_field' | reverse %}{% for history in historys limit:1 %}{{history.date}}{% endfor %}
+            <span class="date-{{post.link}}" id="date-{{post.link}}">{% assign historys = post.historys | sort: 'some_field' | reverse %}{% for history in historys %}{% if break_sure == true %}{% assign break_sure = false %}{% break %}{% else %}{% assign messages = history.messages | sort: 'some_field' | reverse %}{% for message in history.messages %}{% if {{message.name}} contains {{post.link}} %}{{history.date}}{% assign break_sure = true %}{% break %}{% endif %}{% endfor %}{% endif %}{% endfor %}
             </span>
             <span style="display: none" class="list-today-{{post.link}}">
               {% assign historys = post.historys | sort: 'some_field' | reverse %}
-              {% for history in historys limit:1 %}
-                  {% assign messages = history.messages | sort: 'some_field' | reverse %}
-                  {% for message in messages limit:1%}
+              {% for history in historys %}
+              {% if break_sure == true %}
+              {% assign break_sure = false %}
+                {% break %}
+              {% else %}
+                {% assign messages = history.messages | sort: 'some_field' | reverse %}
+                {% for message in messages %}
+                  {% if {{message.name}} contains {{post.link}} %}
+                    {% assign break_sure = true %}
                     {% assign contents = message.contents | sort: 'some_field' | reverse %}
                     {% for content in contents limit:1%}
                       {{content.time}}
                     {% endfor %}
-                  {% endfor %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
               {% endfor %}
             </span>
           </h2>

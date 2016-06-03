@@ -527,7 +527,7 @@ historys:
                time: "15:32"
     - date: 03.06.2016
       messages:  
-        - name: boateng
+        - name: me
           contents:
             - text: Jetzt auch eine Nachricht am 03.06
               time: "00:06"  

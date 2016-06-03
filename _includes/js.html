@@ -30,6 +30,12 @@
       $("#message-window").load("..{{post.permalink}}index.html");
     });
     {% endfor %}
+    $('#face-icon').click(function(){
+      $(".pane-zero").addClass("pane-zero--active");
+    });
+    $('#pane-zero-icon').click(function(){
+      $(".pane-zero").removeClass("pane-zero--active");
+    });
   });
 
 </script>

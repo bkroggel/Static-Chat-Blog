@@ -9,37 +9,51 @@
       </h1>
       <h2>zuletzt online 
         <span class="not-today">am</span>
-        <span id="date-chat" class="not-today">{% assign historys = page.historys | sort: 'some_field' | reverse %}{% for history in historys limit:1 %}{{history.date}}{% endfor %}</span>
+        <span id="date-chat" class="not-today">{% assign historys = page.historys | sort: 'some_field' | reverse %}{% for history in historys %}{% if break_sure == true %}{% assign break_sure = false %}{% break %}{% else %}{% assign messages = history.messages | sort: 'some_field' | reverse %}{% for message in history.messages %}{% if {{message.name}} contains {{page.link}} %}{{history.date}}{% assign break_sure = true %}{% break %}{% endif %}{% endfor %}{% endif %}{% endfor %}
+        </span>
 
-        <span style="color: red">
-        {% assign historys = page.historys | sort: 'some_field' | reverse %}
-        {% for history in historys %}
+        
+        </span>
+        <span class="today">
+          {% assign historys = page.historys | sort: 'some_field' | reverse %}
+          {% for history in historys %}
           {% if break_sure == true %}
-            {% assign break_sure = false %}
+          {% assign break_sure = false %}
             {% break %}
+          }
           {% else %}
             {% assign messages = history.messages | sort: 'some_field' | reverse %}
-            {% for message in history.messages %}
+            {% for message in messages %}
               {% if {{message.name}} contains {{page.link}} %}
-                {{history.date}}
                 {% assign break_sure = true %}
-                {% break %}
+                {% assign contents = message.contents | sort: 'some_field' | reverse %}
+                {% for content in contents limit:1%}
+                  heute {{content.time}}
+                {% endfor %}
               {% endif %}
             {% endfor %}
           {% endif %}
-        {% endfor %}
-        </span>
-        <span class="today">
-          {% assign historys = page.historys | sort: 'some_field' | reverse %}{% for history in historys limit:1 %}{% assign messages = history.messages | sort: 'some_field' | reverse %}{% for message in messages limit:1%}{% assign contents = message.contents | sort: 'some_field' | reverse %}{% for content in contents limit:1%}heute {{content.time}}{% endfor %}{% endfor %}{% endfor %}
+          {% endfor %}
         </span>
     </div>
     <div class="menu">
       <div class="menu-item">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="clip" x="861" y="875"><path opacity=".4" d="M1.816 15.556v.002c0 1.502.584 2.912 1.646 3.972a5.59 5.59 0 0 0 3.974 1.647c1.5 0 2.91-.584 3.972-1.645l9.547-9.548c.77-.768 1.147-1.767 1.058-2.817-.08-.968-.548-1.927-1.32-2.698-1.593-1.595-4.067-1.714-5.516-.265L7.26 12.122c-.88.88-.79 2.25.215 3.26.96.96 2.423 1.054 3.263.216l5.51-5.512c.28-.28.268-.722.054-.936l-.244-.244c-.19-.19-.567-.35-.957.04-1.696 1.7-5.503 5.506-5.503 5.506-.18.18-.635.127-.976-.214-.1-.097-.576-.613-.213-.973l7.915-7.917c.82-.817 2.27-.7 3.23.262.5.5.804 1.1.85 1.685.05.573-.155 1.11-.59 1.543l-9.545 9.55a3.97 3.97 0 0 1-2.83 1.17 3.975 3.975 0 0 1-2.83-1.173 3.973 3.973 0 0 1-1.17-2.828c0-1.07.414-2.076 1.17-2.83l7.21-7.21c.157-.158.264-.58.028-.815L11.5 4.36a.572.572 0 0 0-.834.018L3.46 11.585a5.577 5.577 0 0 0-1.644 3.97z"/>
-        </svg>
+        <span id="test">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" x="861" y="875"><path opacity=".4" d="M1.816 15.556v.002c0 1.502.584 2.912 1.646 3.972a5.59 5.59 0 0 0 3.974 1.647c1.5 0 2.91-.584 3.972-1.645l9.547-9.548c.77-.768 1.147-1.767 1.058-2.817-.08-.968-.548-1.927-1.32-2.698-1.593-1.595-4.067-1.714-5.516-.265L7.26 12.122c-.88.88-.79 2.25.215 3.26.96.96 2.423 1.054 3.263.216l5.51-5.512c.28-.28.268-.722.054-.936l-.244-.244c-.19-.19-.567-.35-.957.04-1.696 1.7-5.503 5.506-5.503 5.506-.18.18-.635.127-.976-.214-.1-.097-.576-.613-.213-.973l7.915-7.917c.82-.817 2.27-.7 3.23.262.5.5.804 1.1.85 1.685.05.573-.155 1.11-.59 1.543l-9.545 9.55a3.97 3.97 0 0 1-2.83 1.17 3.975 3.975 0 0 1-2.83-1.173 3.973 3.973 0 0 1-1.17-2.828c0-1.07.414-2.076 1.17-2.83l7.21-7.21c.157-.158.264-.58.028-.815L11.5 4.36a.572.572 0 0 0-.834.018L3.46 11.585a5.577 5.577 0 0 0-1.644 3.97z"/>
+          </svg>
+        </span>
+        <span for="test" id="mean" class="mdl-tooltip">Sorry - currently no message-option available</span>
+        <script>
+          var element = document.getElementById('mean');
+          componentHandler.upgradeElement(element, "MaterialTooltip");
+        </script>
       </div>
       <div class="menu-item">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="menu" x="1947" y="1961"><path d="M12 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" opacity=".5"/></svg>
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" x="1947" y="1961">
+            <path d="M12 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" opacity=".5"/>
+          </svg>
+        </span>
       </div>
     </div>
   </header>

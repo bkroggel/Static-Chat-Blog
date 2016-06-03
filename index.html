@@ -26,17 +26,69 @@
     <section class="app-wrapper">
       <div class="app mdl-card">
         <div class="pane pane-one">
-          <header>
-            <div class="face-icon">
+          <section class="pane-zero">
+            <header class="pane-zero--header">
+              <div class="pane-zero--wrapper">
+                <div class="pane-zero-icon" id="pane-zero-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px;fill: black;" pointer-events="none" display="block" width="24" height="24" id="back-light" x="558" y="558"><path d="M20 11H7.8l5.6-5.6L12 4l-8 8 8 8 1.4-1.4L7.8 13H20v-2z" fill="#FFF"/></svg>
+                </div>
+                <div class="pane-zero-title">
+                  <h1>
+                    Profil und Status
+                  </h1>
+                </div>
+              </div>
+            </header>
+            <div class="drawer-body">
+              <div class="drawer-section">
+                <div class="drawer-avatar avatar-background">
+                  {% if {{site.profile-img}} %}
+                    <img src="../assets/img/{{ site.profile-img }}" alt="{{ site.profile-img }}">
+                  {% endif %}
+                </div>
+              </div>
+              <div class="drawer-section drawer-content">
+                <div class="drawer-section-title">
+                  <p>
+                    About
+                  </p>
+                </div>
+                <div class="drawer-section-body">
+                  <p>
+                    {{ site.about | newline_to_br }}
+                  </p>
+                </div>
+              </div>
+              <div class="drawer-section drawer-content">
+                <div class="drawer-section-title">
+                  <p>Social Media</p>
+                </div>
+                <div class="drawer-section-body drawer-social">
+                  {% if site.facebook %}
+                  <a href="{{page.facebook}}"><span class="fa fa-facebook-official"></span></a>
+                  {% endif %}
+                  {% if site.twitter %}
+                  <a href="{{page.twitter}}"><span class="fa fa-twitter"></span></a>
+                  {% endif %}
+                  {% if site.instagram %}
+                  <a href="{{page.instagram}}"><span class="fa fa-instagram"></span></a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </section>
+          <header class="pane-one--header">
+            <div class="face-icon" id="face-icon">
               
             </div>
             <div class="menu">
               <button class="mdl-button mdl-js-button">
-                <span>
+                <span id="new-message">
                   <svg class="new-message" xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="chat" x="689" y="687">
                     <path opacity=".5" fill-rule="evenodd" clip-rule="evenodd" d="M19.005 3.175H4.675C3.64 3.175 3 3.79 3 4.82v16.2l3.544-3.514h12.46c1.034 0 2.065-1.06 2.065-2.093V4.82c-.004-1.03-1.035-1.645-2.067-1.645zm-4.99 9.87H7.042V11.1h6.976v1.944zm3-4H7.042V7.1h9.976v1.944z"/>
                   </svg>
                 </span>
+                <span for="new-message" class="mdl-tooltip">Sorry - currently no message-option available</span>
               </button>
               
               <button id="menu1" class="mdl-button mdl-js-button mdl-button--icon">

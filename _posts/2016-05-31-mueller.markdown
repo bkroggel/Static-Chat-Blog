@@ -18,7 +18,7 @@ historys:
           contents:
             - text: So, damit auch beim Thomas was am 01. Juni geschreiben steht.
               time: "20:13"
-        - name: me
+        - name: mueller
           contents:
             - text: So, damit auch beim Thomas was am 01. Juni geschreiben steht.
               time: "20:13"
@@ -31,9 +31,9 @@ historys:
         - name: mueller
           contents:
             - text: Yeah, was geht denn heute?
-              time: "18:24"
-    - date: 04.06.2016
-      messages:
+              time: "18:20"
+            - text: Geile Party?
+              time: "18:23"
         - name: me
           contents:
             - text: C'mon I love it!
