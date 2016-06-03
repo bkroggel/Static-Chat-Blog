@@ -148,6 +148,25 @@ p::after {
     display: inline;
 }
 
+.date-lable {
+  display: inline-block;
+  border-radius: 7.5px;
+  text-shadow: 0 1px 0 rgba(255,255,255,.4);
+  margin: 20px auto;
+  box-shadow: 0 1px .5px rgba(0,0,0,.13);
+  color: rgba(69,90,100,.95);
+  background-color: rgba(225,245,254,.92);
+  padding: 0;
+  h1 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 12.5px;
+    line-height: 21px;
+    padding: 5px 12px 6px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
 .footer-chat {
   padding: 0;
   background-color: rgba(255,255,255,.6);

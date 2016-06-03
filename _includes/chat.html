@@ -10,6 +10,25 @@
       <h2>zuletzt online 
         <span class="not-today">am</span>
         <span id="date-chat" class="not-today">{% assign historys = page.historys | sort: 'some_field' | reverse %}{% for history in historys limit:1 %}{{history.date}}{% endfor %}</span>
+
+        <span style="color: red">
+        {% assign historys = page.historys | sort: 'some_field' | reverse %}
+        {% for history in historys %}
+          {% if break_sure == true %}
+            {% assign break_sure = false %}
+            {% break %}
+          {% else %}
+            {% assign messages = history.messages | sort: 'some_field' | reverse %}
+            {% for message in history.messages %}
+              {% if {{message.name}} contains {{page.link}} %}
+                {{history.date}}
+                {% assign break_sure = true %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+        </span>
         <span class="today">
           {% assign historys = page.historys | sort: 'some_field' | reverse %}{% for history in historys limit:1 %}{% assign messages = history.messages | sort: 'some_field' | reverse %}{% for message in messages limit:1%}{% assign contents = message.contents | sort: 'some_field' | reverse %}{% for content in contents limit:1%}heute {{content.time}}{% endfor %}{% endfor %}{% endfor %}
         </span>
@@ -28,6 +47,11 @@
   <div class="background-frame">
     <section class="message-list" id="message-list">
       {% for history in page.historys %}
+      <div class="bubble-row">
+        <div class="bubble date-lable">
+          <h1>{{history.date}}</h1>
+        </div>
+      </div>
         {% for message in history.messages %}
           <div class="bubble-row">
             {% for content in message.contents %}

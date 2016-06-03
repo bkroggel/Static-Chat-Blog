@@ -13,9 +13,9 @@ instagram: https://www.instagram.com/jeromeboateng/
 status: Zum Abschied sag ich leise, scheiße!
 
 historys:
-    - date: 31.05.2016
+    - date: 01.05.2016
       messages:
-        - name: Boateng
+        - name: boateng
           contents:
             - text: MC Gauland, is in da House und noch ein wenig mehr zusätzlichen Text. Da geht bestimmt noch mal was.
               time: "21:09"
@@ -67,7 +67,7 @@ historys:
                time: "12:31"
             -  text: jep, ich spam jetzt einfach mal den ganzen Platz hier voll und dann schauen wir, was passiert
                time: "12:32"
-        - name: Boateng
+        - name: boateng
           contents:
             - text: MC Gauland, is in da House und noch ein wenig mehr zusätzlichen Text. Da geht bestimmt noch mal was.
               time: "21:09"
@@ -524,7 +524,13 @@ historys:
             -  text: eier, wir brauchen eier
                time: "12:31"
             -  text: jdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdjjdjdjdjdjdjdjdjjdj
-               time: "15:32"    
+               time: "15:32"
+    - date: 03.06.2016
+      messages:  
+        - name: boateng
+          contents:
+            - text: Jetzt auch eine Nachricht am 03.06
+              time: "00:06"  
 
     
 ---

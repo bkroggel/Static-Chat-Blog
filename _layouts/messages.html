@@ -24,6 +24,7 @@ $(document).ready(function(){
       $(function(){
         $(".header-info h2 .not-today").remove();
         $(".header-info .today").css("display", "inline-block");
+        $(".bubble-row .date-lable h1").last().empty().append("heute");
       });
     } else {
       $(function(){
@@ -31,6 +32,7 @@ $(document).ready(function(){
       }); 
     };
   });
+
   $('.header-icon, .header-info').click(function(){
     $(".window-columns").addClass("open-person");
   });
