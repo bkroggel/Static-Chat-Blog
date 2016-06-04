@@ -1,6 +1,7 @@
 .chat-window {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 .header-chat {
@@ -42,11 +43,8 @@
   }
 }
 
-.menu-item {
-  margin-right: 20px;
-  &:last-of-type {
-    margin-right: 0;
-  }
+.menu button span {
+  outline: none;
 }
 
 .background-frame {

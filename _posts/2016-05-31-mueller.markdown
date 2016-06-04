@@ -38,6 +38,12 @@ historys:
           contents:
             - text: C'mon I love it!
               time: "18:25"
+    - date: 04.06.2016
+      messages:
+        - name: me
+          contents:
+            - text: Alles klar bei dir?
+              time: "13:46"
 
     
 ---

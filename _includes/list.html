@@ -2,15 +2,18 @@
   {% for post in site.posts %}
     <div class="chat" id="{{post.link}}">
       <div class="chat-icon">
+        {% if post.face %}
         <img src="../assets/img/face/{{post.face}}" alt="{{post.face}}">
+        {% endif %}
       </div>
       <div class="content">
         <div class="first-line">
           <h1>{{post.name}}</h1>
           <h2>
-            <span class="date-{{post.link}}" id="date-{{post.link}}">{% assign historys = post.historys | sort: 'some_field' | reverse %}{% for history in historys %}{% if break_sure == true %}{% assign break_sure = false %}{% break %}{% else %}{% assign messages = history.messages | sort: 'some_field' | reverse %}{% for message in history.messages %}{% if {{message.name}} contains {{post.link}} %}{{history.date}}{% assign break_sure = true %}{% break %}{% endif %}{% endfor %}{% endif %}{% endfor %}
+            <span class="date-{{post.link}}" id="date-{{post.link}}">{%if post.historys %}{% assign historys = post.historys | sort: 'some_field' | reverse %}{% for history in historys %}{% if break_sure == true %}{% assign break_sure = false %}{% break %}{% else %}{% assign messages = history.messages | sort: 'some_field' | reverse %}{% for message in history.messages %}{% if {{message.name}} contains {{post.link}} %}{{history.date}}{% assign break_sure = true %}{% break %}{% endif %}{% endfor %}{% endif %}{% endfor %}{% endif %}
             </span>
             <span style="display: none" class="list-today-{{post.link}}">
+              {% if post.historys %}
               {% assign historys = post.historys | sort: 'some_field' | reverse %}
               {% for history in historys %}
               {% if break_sure == true %}
@@ -29,20 +32,23 @@
                 {% endfor %}
               {% endif %}
               {% endfor %}
+              {% endif %}
             </span>
           </h2>
         </div>
         <p>
+          {% if post.historys %}
           {% assign historys = post.historys | sort: 'some_field' | reverse %}
           {% for history in historys limit:1 %}
               {% assign messages = history.messages | sort: 'some_field' | reverse %}
               {% for message in messages limit:1%}
                 {% assign contents = message.contents | sort: 'some_field' | reverse %}
                 {% for content in contents limit:1%}
-                  {{content.text | truncate:40,'...'}}
+                  {{content.text}}
                 {% endfor %}
               {% endfor %}
           {% endfor %}
+          {% endif %}
         </p>
       </div>
     </div>

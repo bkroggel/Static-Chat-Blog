@@ -33,8 +33,27 @@ $(document).ready(function(){
       }); 
     };
   });
+  $(function(){
+    var jekyllDate = $(".bubble-row .date-lable h1").last().text();
+    var date = jekyllDate.substring(0, 2);
+    var month = jekyllDate.substring(3, 5);
+    var year = jekyllDate.substring(6, 10);
+    var myDate = new Date(year, month - 1, date);
+    var today = new Date();
+    myDate.setHours(0,0,0,0);
+    today.setHours(0,0,0,0);
+    if(myDate.getTime() === today.getTime() ) {
+      $(function(){
+        $(".bubble-row .date-lable h1").last().empty().append("heute");
+      });
+    } else {
+      $(function(){
 
-  $('.header-icon, .header-info').click(function(){
+      }); 
+    };
+  });
+
+  $('.header-icon, .header-info, #menu-information').click(function(){
     $(".window-columns").addClass("open-person");
   });
   $('.header-close span').click(function(){

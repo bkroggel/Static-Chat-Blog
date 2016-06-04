@@ -11,8 +11,10 @@
   </header>
   <div class="drawer-body">
     <div class="drawer-section">
-      <div class="drawer-avatar">
+      <div class="drawer-avatar avatar-background">
+        {% if page.face %}
         <img src="../assets/img/face/{{page.face}}" alt="{{page.face}}">
+        {% endif %}
       </div>
     </div>
     <div class="drawer-section drawer-content">

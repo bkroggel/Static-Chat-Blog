@@ -6,11 +6,19 @@
 
 .open-person {
   .person {
-    width: 40%;
+    width: 100%;
   }
   .chat-window {
-    width: 60%;
+    width: 0%;
   }
+  @media (min-width: 1000px){
+    .person {
+      width: 40%;
+    }
+    .chat-window {
+      width: 60%;
+    }
+  } 
 }
 
 .header-close {
