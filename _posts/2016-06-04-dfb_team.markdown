@@ -1,0 +1,37 @@
+---
+permalink: /dfb_team/
+layout: messages
+contact: dfb_team
+name: DFB-Team
+link: team
+face: 
+
+groupchat: true
+members:
+  - mueller
+  - boateng
+  - neuer
+
+
+historys:
+  - date: 01.06.2016
+    messages: 
+      - name: mueller
+        contents:
+          - text: Wow, jetzt haben wir hier also einen richtigen eigenen Gruppenchat?
+            time: "14:58"
+      - name: neuer
+        contents:
+          - text: Welcher von euch Vollhorsts hat mich da jetzt wieder in so ne Unterhaltung rein gepackt?
+            time: "14:59"
+          - text: Das ist ja wohl das allerletzt!
+            time: "14:59"
+      - name: boateng
+        contents:
+          - text: Nen Herzlichen!
+            time: "15:00"
+      - name: me
+        contents:
+          - text: Hey, hey Jungs, jetzt macht mal halblang!
+            time: "18:06"
+---

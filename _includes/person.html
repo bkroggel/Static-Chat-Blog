@@ -12,8 +12,8 @@
   <div class="drawer-body">
     <div class="drawer-section">
       <div class="drawer-avatar avatar-background">
-        {% if page.face %}
-        <img src="../assets/img/face/{{page.face}}" alt="{{page.face}}">
+        {% if contact.profil_pic %}
+        <img src="../assets/img/face/{{contact.profil_pic}}" alt="{{contact.profil_pic}}">
         {% endif %}
       </div>
     </div>
@@ -22,22 +22,47 @@
         <p>Status</p>
       </div>
       <div class="drawer-section-body">
-        <p>{{page.status | newline_to_br}}</p>
+        <p>{{contact.status | newline_to_br}}</p>
       </div>
     </div>
+    {% if page.groupchat == true %}
+      <div class="drawer-section drawer-content">
+        <div class="drawer-section-title">
+          <p>Members</p>
+        </div>
+        <div class="drawer-section-body">
+          {% for member in page.members %}
+            {% assign chat_member = site.data.contacts[member] %}
+            <div class="chat">
+              <div class="chat-icon">
+                {% if chat_member.profil_pic %}
+                <img src="../assets/img/face/{{chat_member.profil_pic}}" alt="{{chat_member.profil_pic}}">
+                {% endif %}
+              </div>
+              <div class="content">
+                <div class="first-line">
+                  <h1>{{chat_member.name}}</h1>
+                </div>
+                  <p>{{chat_member.status}}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
     <div class="drawer-section drawer-content">
       <div class="drawer-section-title">
         <p>Social Media</p>
       </div>
       <div class="drawer-section-body drawer-social">
-        {% if page.facebook %}
-        <a href="{{page.facebook}}"><span class="fa fa-facebook-official"></span></a>
+        {% if contact.facebook %}
+        <a href="{{contact.facebook}}"><span class="fa fa-facebook-official"></span></a>
         {% endif %}
-        {% if page.twitter %}
-        <a href="{{page.twitter}}"><span class="fa fa-twitter"></span></a>
+        {% if contact.twitter %}
+        <a href="{{contact.twitter}}"><span class="fa fa-twitter"></span></a>
         {% endif %}
-        {% if page.instagram %}
-        <a href="{{page.instagram}}"><span class="fa fa-instagram"></span></a>
+        {% if contact.instagram %}
+        <a href="{{contact.instagram}}"><span class="fa fa-instagram"></span></a>
         {% endif %}
       </div>
     </div>

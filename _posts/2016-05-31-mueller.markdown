@@ -1,9 +1,7 @@
 ---
 permalink: /mueller/
 layout: messages
-link: mueller
-name: Thomas Müller
-face: mueller.jpg
+contact: mueller
 
 historys:
     - date: 31.05.2016
@@ -47,3 +45,5 @@ historys:
 
     
 ---
+
+

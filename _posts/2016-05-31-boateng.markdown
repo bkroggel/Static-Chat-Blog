@@ -1,5 +1,6 @@
 ---
 permalink: /boateng/
+contact: boateng
 layout: messages
 name: Jerome Boateng
 link: boateng
@@ -10,7 +11,7 @@ twitter: https://twitter.com/jb17official
 facebook: https://www.facebook.com/JeromeBoateng17/
 instagram: https://www.instagram.com/jeromeboateng/
 
-status: Zum Abschied sag ich leise, scheiße!
+status: Ich sag jetzt gar nichts mehr
 
 historys:
     - date: 01.05.2016

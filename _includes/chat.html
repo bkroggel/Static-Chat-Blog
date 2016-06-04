@@ -1,18 +1,18 @@
 <section class="chat-window">
   <header class="header-chat">
     <div class="face-icon header-icon">
-      {% if page.face %}
-      <img src="../assets/img/face/{{page.face}}" alt="{{page.face}}">
+      {% if contact.profil_pic %}
+      <img src="../assets/img/face/{{contact.profil_pic}}" alt="{{contact.profil_pic}}">
       {% endif %}
     </div>
     <div class="header-info">
       <h1>
-        {{page.name}}
+        {{contact.name}}
       </h1>
-      {% if page.historys %}
+      {% if page.historys and contact.groupchat != true %}
       <h2>zuletzt online 
         <span class="not-today">am</span>
-        <span id="date-chat" class="not-today">{% if page.historys %}{% assign historys = page.historys | sort: 'some_field' | reverse %}{% for history in historys %}{% if break_sure == true %}{% assign break_sure = false %}{% break %}{% else %}{% assign messages = history.messages | sort: 'some_field' | reverse %}{% for message in history.messages %}{% if {{message.name}} contains {{page.link}} %}{{history.date}}{% assign break_sure = true %}{% break %}{% endif %}{% endfor %}{% endif %}{% endfor %}{% endif %}
+        <span id="date-chat" class="not-today">{% if page.historys %}{% assign historys = page.historys | sort: 'some_field' | reverse %}{% for history in historys %}{% if break_sure == true %}{% assign break_sure = false %}{% break %}{% else %}{% assign messages = history.messages | sort: 'some_field' | reverse %}{% for message in history.messages %}{% if {{message.name}} contains {{contact.short}} %}{{history.date}}{% assign break_sure = true %}{% break %}{% endif %}{% endfor %}{% endif %}{% endfor %}{% endif %}
         </span>
 
         
@@ -28,7 +28,7 @@
           {% else %}
             {% assign messages = history.messages | sort: 'some_field' | reverse %}
             {% for message in messages %}
-              {% if {{message.name}} contains {{page.link}} %}
+              {% if {{message.name}} contains {{contact.short}} %}
                 {% assign break_sure = true %}
                 {% assign contents = message.contents | sort: 'some_field' | reverse %}
                 {% for content in contents limit:1%}
@@ -85,6 +85,9 @@
             {% for content in message.contents %}
             <div class="bubble-frame">
               <div class="bubble {% if {{message.name}} == 'me' %}bubble-out{% else %}bubble-in{% endif %}">
+                {% if page.groupchat == true %}
+                  <h1>{{site.data.contacts[message.name]name}}</h1>
+                {% endif %}
                 <p>{{content.text}}</p>
                 <h3>{{content.time}}</h3>
               </div>

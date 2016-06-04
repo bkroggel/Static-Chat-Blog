@@ -1,8 +1,5 @@
 ---
 permalink: /neuer/
 layout: messages
-link: neuer
-name: Manuel Neuer
-face: 
-
+contact: neuer
 ---

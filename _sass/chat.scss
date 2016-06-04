@@ -22,7 +22,9 @@
   }
   img {
     border-radius: 50%;
-    width: 40px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -99,6 +101,19 @@
     height: 15px;
     margin: 0;
   }
+  h1 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 12.5px;
+    line-height: 20px;
+    height: 20px;
+    font-weight: 600;
+    color: red;
+    margin-top: 0;
+    margin-bottom: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
 
 .bubble-in {
@@ -109,6 +124,14 @@
 .bubble-out {
   background-color: #dcf8c6;
   float: right;
+}
+
+.bubble-frame h1 {
+  display: none;
+}
+
+.bubble-frame:first-of-type .bubble-in h1 {
+  display: inline-block;
 }
 
 .bubble-frame:last-of-type .bubble {
@@ -159,6 +182,8 @@
     font-family: 'Open Sans',sans-serif;
     font-size: 12.5px;
     line-height: 21px;
+    font-weight: 400;
+    color: rgb(75,75,75);
     padding: 5px 12px 6px;
     margin: 0;
     text-transform: uppercase;
