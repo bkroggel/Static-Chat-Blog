@@ -15,27 +15,7 @@
         <span id="date-chat" class="not-today">{% assign conversations = page.conversations | sort: 'some_field' | reverse %}{% for conversation_hash in conversations %}{% if should_break == true %}{% assign should_break = false %}{% break %}{% else %}{% for conversation in conversation_hash %}{% assign date = conversation[0] | split:"," %}{% assign date = date[0] %}{% assign date_temp = date | split: "." %}{% capture date %}{{date_temp[2]}}.{{date_temp[1]}}.{{date_temp[0]}}{% endcapture %}{% assign date = date | date: "%d.%m.%Y" %}{% assign name = conversation[0] | split:"-" %}{% assign name = name[1] | strip %}{% if name == contact.short %}{{date}}{% assign should_break = true %}{% break %}{% endif %}{% endfor %}{% endif %}{% endfor %}</span>
 
         <span class="today">
-          {% if page.historys %}
-          {% assign historys = page.historys | sort: 'some_field' | reverse %}
-          {% for history in historys %}
-          {% if break_sure == true %}
-          {% assign break_sure = false %}
-            {% break %}
-          }
-          {% else %}
-            {% assign messages = history.messages | sort: 'some_field' | reverse %}
-            {% for message in messages %}
-              {% if {{message.name}} contains {{contact.short}} %}
-                {% assign break_sure = true %}
-                {% assign contents = message.contents | sort: 'some_field' | reverse %}
-                {% for content in contents limit:1%}
-                  heute {{content.time}}
-                {% endfor %}
-              {% endif %}
-            {% endfor %}
-          {% endif %}
-          {% endfor %}
-          {% endif %}
+          {% assign conversations = page.conversations | sort: 'some_field' | reverse %}{% for conversation_hash in conversations %}{% if should_break == true %}{% assign should_break = false %}{% break %}{% else %}{% for conversation in conversation_hash %}{% assign time_temp = conversation[0] | split:"-" %}{% assign time = time_temp[0] | rstrip | slice: -5, 5 %}{% assign name = conversation[0] | split:"-" %}{% assign name = name[1] | strip %}{% if name == contact.short %}heute {{time}}{% assign should_break = true %}{% break %}{% endif %}{% endfor %}{% endif %}{% endfor %}
         </span>
       </h2>
       {% endif %}
@@ -71,36 +51,9 @@
 
   <div class="background-frame">
     <section class="message-list" id="message-list">
-      {% if page.contact != "neuer" %}
-      {% for history in page.historys %}
-      <div class="bubble-row">
-        <div class="bubble date-lable">
-          <h1>{{history.date}}</h1>
-        </div>
-      </div>
-        {% for message in history.messages %}
-          <div class="bubble-row">
-            {% for content in message.contents %}
-            <div class="bubble-frame">
-              <div class="bubble {% if {{message.name}} == 'me' %}bubble-out{% else %}bubble-in{% endif %}">
-                {% if page.groupchat == true %}
-                  <h1>{{site.data.contacts[message.name]name}}</h1>
-                {% endif %}
-                <p>{{content.text}}</p>
-                <h3>{{content.time}}</h3>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-        {% endfor %}
-      {% endfor %}
-      {% endif %}
-
-      {% if page.contact == "neuer" %}
-
+      
       {% include chat_new.html %}
 
-      {% endif %}
     </section>
   </div>
   <footer class="footer-chat">

@@ -1,3 +1,32 @@
 Old version of show Date in Chat view header
 
 {% if page.historys %}{% assign historys = page.historys | sort: 'some_field' | reverse %}{% for history in historys %}{% if break_sure == true %}{% assign break_sure = false %}{% break %}{% else %}{% assign messages = history.messages | sort: 'some_field' | reverse %}{% for message in history.messages %}{% if {{message.name}} contains {{contact.short}} %}{{history.date}}{% assign break_sure = true %}{% break %}{% endif %}{% endfor %}{% endif %}{% endfor %}{% endif %}
+
+
+
+Alte Chat Message Anzeige
+
+{% if page.contact != "neuer" %}
+{% for history in page.historys %}
+<div class="bubble-row">
+  <div class="bubble date-lable">
+    <h1>{{history.date}}</h1>
+  </div>
+</div>
+  {% for message in history.messages %}
+    <div class="bubble-row">
+      {% for content in message.contents %}
+      <div class="bubble-frame">
+        <div class="bubble {% if {{message.name}} == 'me' %}bubble-out{% else %}bubble-in{% endif %}">
+          {% if page.groupchat == true %}
+            <h1>{{site.data.contacts[message.name]name}}</h1>
+          {% endif %}
+          <p>{{content.text}}</p>
+          <h3>{{content.time}}</h3>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+{% endfor %}
+{% endif %}

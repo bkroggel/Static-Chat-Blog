@@ -11,45 +11,15 @@
         <div class="first-line">
           <h1>{{contact.name}}</h1>
           <h2>
-            <span class="date-{{contact.short}}" id="date-{{contact.short}}">{%if post.historys %}{% assign historys = post.historys | sort: 'some_field' | reverse %}{% for history in historys %}{% if break_sure == true %}{% assign break_sure = false %}{% break %}{% else %}{% assign messages = history.messages | sort: 'some_field' | reverse %}{% for message in history.messages %}{% if {{message.name}} contains {{contact.short}} %}{{history.date}}{% assign break_sure = true %}{% break %}{% endif %}{% endfor %}{% endif %}{% endfor %}{% endif %}
+            <span class="date-{{contact.short}}" id="date-{{contact.short}}">{% if post.conversations %}{% assign conversations = post.conversations | sort: 'some_field' | reverse %}{% for conversation_hash in conversations %}{% if should_break == true %}{% assign should_break = false %}{% break %}{% else %}{% for conversation in conversation_hash %}{% assign date = conversation[0] | split:"," %}{% assign date = date[0] %}{% assign date_temp = date | split: "." %}{% capture date %}{{date_temp[2]}}.{{date_temp[1]}}.{{date_temp[0]}}{% endcapture %}{% assign date = date | date: "%d.%m.%Y" %}{% assign name = conversation[0] | split:"-" %}{% assign name = name[1] | strip %}{% if name == contact.short %}{{date}}{% assign should_break = true %}{% break %}{% endif %}{% endfor %}{% endif %}{% endfor %}{% endif %}
             </span>
             <span style="display: none" class="list-today-{{contact.short}}">
-              {% if post.historys %}
-              {% assign historys = post.historys | sort: 'some_field' | reverse %}
-              {% for history in historys %}
-              {% if break_sure == true %}
-              {% assign break_sure = false %}
-                {% break %}
-              {% else %}
-                {% assign messages = history.messages | sort: 'some_field' | reverse %}
-                {% for message in messages %}
-                  {% if {{message.name}} contains {{contact.short}} %}
-                    {% assign break_sure = true %}
-                    {% assign contents = message.contents | sort: 'some_field' | reverse %}
-                    {% for content in contents limit:1%}
-                      {{content.time}}
-                    {% endfor %}
-                  {% endif %}
-                {% endfor %}
-              {% endif %}
-              {% endfor %}
-              {% endif %}
+              {% if post.conversations %}{% assign conversations = post.conversations | sort: 'some_field' | reverse %}{% for conversation_hash in conversations %}{% if should_break == true %}{% assign should_break = false %}{% break %}{% else %}{% for conversation in conversation_hash %}{% assign time_temp = conversation[0] | split:"-" %}{% assign time = time_temp[0] | rstrip | slice: -5, 5 %}{% assign name = conversation[0] | split:"-" %}{% assign name = name[1] | strip %}{% if name == contact.short %}heute {{time}}{% assign should_break = true %}{% break %}{% endif %}{% endfor %}{% endif %}{% endfor %}{% endif %}
             </span>
           </h2>
         </div>
         <p>
-          {% if post.historys %}
-          {% assign historys = post.historys | sort: 'some_field' | reverse %}
-          {% for history in historys limit:1 %}
-              {% assign messages = history.messages | sort: 'some_field' | reverse %}
-              {% for message in messages limit:1%}
-                {% assign contents = message.contents | sort: 'some_field' | reverse %}
-                {% for content in contents limit:1%}
-                  {{content.text}}
-                {% endfor %}
-              {% endfor %}
-          {% endfor %}
-          {% endif %}
+          {% if post.conversations %}{% assign conversations = post.conversations | sort: 'some_field' | reverse %}{% for conversation_hash in conversations limit: 1 %}{% for conversation in conversation_hash %}{% assign message = conversation[1] %} {{message}}{% endfor %}{% endfor %}{% endif %}
         </p>
       </div>
     </div>

@@ -1,6 +1,6 @@
 <div class="bubble-frame">
   <div class="bubble {% if {{name}} == 'me' %}bubble-out{% else %}bubble-in{% endif %}">
-    {% if page.groupchat == true %}
+    {% if contact.groupchat == true %}
       <h1>{{site.data.contacts[name]name}}</h1>
     {% endif %}
     {% assign message_img_check = message | slice: 0, 3 %}

@@ -27,5 +27,6 @@ conversations:
    - 11.08.15, 22:26 - me: Schon toll, dass das so einfach funktioniert hat.
    - 12.08.15, 23:25 - neuer: Klappt das jetzt?
    - 16.08.15, 21:16 - me: Geht doch!
-   - 05.06.16, 12:38 - neuer: Ja?
+   - 05.06.16, 12:31 - neuer: Ja?
+   - 05.06.16, 12:35 - me: Tatsächlich?
 ---

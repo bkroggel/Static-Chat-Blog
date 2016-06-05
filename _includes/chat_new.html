@@ -1,4 +1,4 @@
-
+{% if page.conversations %}
 {% for conversation_hash in page.conversations %}
   {% if forloop.first %}
 
@@ -88,3 +88,4 @@
   {% endif %}
 {% endfor %}
 </div> <!-- closes the bubblerow which gets opened in forloop.first -->
+{% endif %}
