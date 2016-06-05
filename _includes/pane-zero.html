@@ -14,8 +14,8 @@
   <div class="drawer-body">
     <div class="drawer-section">
       <div class="drawer-avatar avatar-background">
-        {% if {{site.profile-img}} %}
-          <img src="../assets/img/{{ site.profile-img }}" alt="{{ site.profile-img }}">
+        {% if site.data.about.profil_pic %}
+          <img src="../media/profil_pic/{{ site.data.about.profil_pic }}" alt="{{ site.data.about.profil_pic }}">
         {% endif %}
       </div>
     </div>
@@ -27,7 +27,7 @@
       </div>
       <div class="drawer-section-body">
         <p>
-          {{ site.about | newline_to_br }}
+          {{ site.data.about.about | newline_to_br }}
         </p>
       </div>
     </div>
@@ -36,14 +36,14 @@
         <p>Social Media</p>
       </div>
       <div class="drawer-section-body drawer-social">
-        {% if site.facebook %}
-        <a href="{{page.facebook}}"><span class="fa fa-facebook-official"></span></a>
+        {% if site.data.about.facebook %}
+        <a href="{{site.data.about.facebook}}"><span class="fa fa-facebook-official"></span></a>
         {% endif %}
-        {% if site.twitter %}
-        <a href="{{page.twitter}}"><span class="fa fa-twitter"></span></a>
+        {% if site.data.about.twitter %}
+        <a href="{{site.data.about.twitter}}"><span class="fa fa-twitter"></span></a>
         {% endif %}
-        {% if site.instagram %}
-        <a href="{{page.instagram}}"><span class="fa fa-instagram"></span></a>
+        {% if site.data.about.instagram %}
+        <a href="{{site.data.about.instagram}}"><span class="fa fa-instagram"></span></a>
         {% endif %}
       </div>
     </div>

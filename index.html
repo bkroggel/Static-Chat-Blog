@@ -4,21 +4,29 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>WhatsApp Studie | MDL</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <title>{{site.data.about.title}}</title>
+    <meta name="description" content="{{site.data.about.about | truncate: 147, '...'}}">
+    <meta name="url" content="{{site.url}}">
+    <meta name="coverage" content="Worldwide">
+
+    <meta property="og:url" content="{{site.url}}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{site.data.about.title}}">
+    <meta property="og:description" content="{{site.data.about.about | truncatewords: 15, '...'}}">
+    <meta property="og:site_name" content="{{site.data.about.title}}">
+    <meta name="twitter:url" content="{{site.url}}">
+    <meta name="twitter:title" content="{{site.data.about.title}}">
+    <meta name="twitter:description" content="{{site.data.about.about | truncate: 147, '...'}}">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link  href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ "assets/css/normalize.css" | prepend: site.baseurl}}" rel="stylesheet">
+    <link href="{{"assets/css/main.css" | prepend: site.baseurl}}" rel="stylesheet">
     <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="assets/scripts/script.js"></script>
-    
-    
-
-    
-    
+    <script src="{{"assets/scripts/script.js" | prepend: site.baseurl}}"></script>
     
   </head>
 
@@ -28,9 +36,13 @@
         <div class="pane pane-one">
           {% include pane-zero.html %}
           <header class="pane-one--header">
-            <div class="face-icon" id="face-icon">
-              
-            </div>
+            <div class="face-icon-wrapper"  >
+              <div class="face-icon" id="face-icon">
+                {% if site.data.about.profil_pic %}
+                  <img src="../media/profil_pic/{{ site.data.about.profil_pic }}" alt="{{ site.data.about.profil_pic }}">
+                {% endif %}
+              </div>
+              </div>
             <div class="menu">
               <button class="mdl-button mdl-js-button">
                 <span id="new-message">
