@@ -74,6 +74,7 @@
 
   <div class="background-frame">
     <section class="message-list" id="message-list">
+      {% if page.contact != "neuer" %}
       {% for history in page.historys %}
       <div class="bubble-row">
         <div class="bubble date-lable">
@@ -96,6 +97,13 @@
           </div>
         {% endfor %}
       {% endfor %}
+      {% endif %}
+
+      {% if page.contact == "neuer" %}
+
+      {% include chat_new.html %}
+
+      {% endif %}
     </section>
   </div>
   <footer class="footer-chat">

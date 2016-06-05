@@ -1,0 +1,17 @@
+<div class="bubble-frame">
+  <div class="bubble {% if {{name}} == 'me' %}bubble-out{% else %}bubble-in{% endif %}">
+    {% if page.groupchat == true %}
+      <h1>{{site.data.contacts[name]name}}</h1>
+    {% endif %}
+    {% assign message_img_check = message | slice: 0, 3 %}
+    {% if message_img_check == "img" %}
+      <div>
+        <img src="../assets/img/images/{{ message | remove_first: "img "}}" alt="">
+      </div>
+      <h3>{{time}}</h3>
+    {% else %}
+    <p>{{message}}</p>
+    <h3>{{time}}</h3>
+    {% endif %}
+  </div>
+</div>

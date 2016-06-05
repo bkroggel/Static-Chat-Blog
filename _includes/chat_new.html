@@ -1,0 +1,84 @@
+
+{% for conversation_hash in page.conversations %}
+  {% if forloop.first %}
+
+    {% for conversation in conversation_hash %}
+      {% assign message = conversation[1] %}
+      {% assign date = conversation[0] | split:"," %}
+      {% assign date = date[0] %}
+      {% assign name = conversation[0] | split:"-" %}
+      {% assign name = name[1] %}
+      {% assign time_temp = conversation[0] | split:"-" %}
+      {% assign time = time_temp[0] | rstrip | slice: -5, 5 %}
+      
+      <div class="bubble-row">
+        <div class="bubble date-lable">
+          <h1>{{date}}</h1>
+        </div>
+      </div>
+      <div class="bubble-row">
+        {% include bubble.html %}
+
+
+      {% assign date_old = date %}
+      {% assign name_old = name %}
+    {% endfor %}
+  {% else %}
+    {% for conversation in conversation_hash %}
+      {% assign message = conversation[1] %}
+      {% assign date = conversation[0] | split:"," %}
+      {% assign date = date[0] | strip %}
+      {% assign name = conversation[0] | split:"-" %}
+      {% assign name = name[1] | strip %}
+      {% assign time_temp = conversation[0] | split:"-" %}
+      {% assign time = time_temp[0] | rstrip | slice: -5, 5 %}
+    {% endfor %}
+    {% if name == name_old and date == date_old %}
+      
+        {% include bubble.html %}
+
+      {% assign date_old = date %}
+      {% assign name_old = name %}
+
+    {% elsif name != name_old and date == date_old %}
+      
+      </div>
+      <div class="bubble-row">
+        {% include bubble.html %}
+
+      {% assign date_old = date %}
+      {% assign name_old = name %}
+
+    {% elsif date != date_old %}
+      
+      </div>
+      <div class="bubble-row">
+        <div class="bubble date-lable">
+          <h1>{{date}}</h1>
+        </div>
+      </div>
+      <div class="bubble-row">
+        {% include bubble.html %}
+
+      {% assign date_old = date %}
+      {% assign name_old = name %}
+
+
+    {% elsif name != name_old and date != date_old %}
+      
+      </div>
+      <div class="bubble-row">
+        <div class="bubble date-lable">
+          <h1>{{date}}</h1>
+        </div>
+      </div>
+      <div class="bubble-row">
+        {% include bubble.html %}
+
+      {% assign date_old = date %}
+      {% assign name_old = name %}
+
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</div> <!-- closes the bubblerow which gets opened in forloop.first -->
