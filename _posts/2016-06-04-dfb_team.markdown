@@ -1,7 +1,5 @@
 ---
-permalink: /dfb_team/
-layout: messages
-contact: dfb_team
+slug: dfb_team
 
 members:
   - mueller

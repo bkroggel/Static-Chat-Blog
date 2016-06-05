@@ -1,7 +1,5 @@
 ---
-permalink: /mueller/
-layout: messages
-contact: mueller
+slug: mueller
 
 conversations:
    - 04.08.15, 20:30 - mueller: Bin noch kurz Sport machen.

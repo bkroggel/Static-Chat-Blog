@@ -1,6 +1,6 @@
 <section class="list" >
   {% for post in site.posts %}
-  {% assign contact = site.data.contacts[post.contact] %}
+  {% assign contact = site.data.contacts[post.slug] %}
     <div class="chat" id="{{contact.short}}">
       <div class="chat-icon">
         {% if contact.profil_pic %}

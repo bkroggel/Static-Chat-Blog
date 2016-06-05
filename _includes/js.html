@@ -3,7 +3,7 @@
   $(document).ready(function(){
 
     {% for post in site.posts %}
-    {% assign contact = site.data.contacts[post.contact] %}
+    {% assign contact = site.data.contacts[post.slug] %}
 
     $(function(){
       var jekyllDate = $("#date-{{contact.short}}").text();
@@ -28,10 +28,10 @@
     {% endfor %}
 
     {% for post in site.posts %}
-    {% assign contact = site.data.contacts[post.contact] %}
+    {% assign contact = site.data.contacts[post.slug] %}
 
     $('#{{contact.short}}').click(function(){
-      $("#message-window").load("..{{post.permalink}}index.html");
+      $("#message-window").load("../{{post.slug}}/index.html");
     });
     {% endfor %}
     $('#face-icon').click(function(){

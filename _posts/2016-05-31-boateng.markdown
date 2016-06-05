@@ -1,17 +1,6 @@
 ---
-permalink: /boateng/
-contact: boateng
-layout: messages
-name: Jerome Boateng
-link: boateng
-face: boateng.jpg
-date: 02.06.2016
-
-twitter: https://twitter.com/jb17official
-facebook: https://www.facebook.com/JeromeBoateng17/
-instagram: https://www.instagram.com/jeromeboateng/
-
-status: Ich sag jetzt gar nichts mehr
+slug: boateng
+date: 2016-06-05 21:52:41
 
 conversations:
   - 04.08.15, 20:30 - boateng: START

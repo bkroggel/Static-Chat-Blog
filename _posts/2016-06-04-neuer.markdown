@@ -1,7 +1,5 @@
 ---
-permalink: /neuer/
-layout: messages
-contact: neuer
+slug: neuer
 
 conversations:
    - 04.08.15, 20:30 - neuer: Bin noch kurz Sport machen.
