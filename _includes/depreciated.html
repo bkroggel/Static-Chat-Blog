@@ -1,0 +1,3 @@
+Old version of show Date in Chat view header
+
+{% if page.historys %}{% assign historys = page.historys | sort: 'some_field' | reverse %}{% for history in historys %}{% if break_sure == true %}{% assign break_sure = false %}{% break %}{% else %}{% assign messages = history.messages | sort: 'some_field' | reverse %}{% for message in history.messages %}{% if {{message.name}} contains {{contact.short}} %}{{history.date}}{% assign break_sure = true %}{% break %}{% endif %}{% endfor %}{% endif %}{% endfor %}{% endif %}

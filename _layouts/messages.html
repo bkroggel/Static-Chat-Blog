@@ -12,6 +12,16 @@ $(document).ready(function(){
   $(function(){ 
     $(".background-frame").scrollTop($(".background-frame")[0].scrollHeight);
   });
+  // Additional scrolling behaviour after all pics are finally loaded
+  var $elems = $('#message-list').find('img');
+  var elemsCount = $elems.length;
+  var loadedCount = 0;
+  $elems.on('load', function () {
+      loadedCount++;
+      if (loadedCount == elemsCount) {
+        $(".background-frame").scrollTop($(".background-frame")[0].scrollHeight);
+      }
+  });
   $(function(){
     var jekyllDate = $("#date-chat").text();
     var date = jekyllDate.substring(0, 2);

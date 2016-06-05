@@ -6,6 +6,9 @@
       {% assign message = conversation[1] %}
       {% assign date = conversation[0] | split:"," %}
       {% assign date = date[0] %}
+      {% assign date_temp = date | split: "." %}
+      {% capture date %}{{date_temp[2]}}.{{date_temp[1]}}.{{date_temp[0]}}{% endcapture %}
+      {% assign date = date | date: "%d.%m.%Y" %}
       {% assign name = conversation[0] | split:"-" %}
       {% assign name = name[1] %}
       {% assign time_temp = conversation[0] | split:"-" %}
@@ -28,6 +31,9 @@
       {% assign message = conversation[1] %}
       {% assign date = conversation[0] | split:"," %}
       {% assign date = date[0] | strip %}
+      {% assign date_temp = date | split: "." %}
+      {% capture date %}{{date_temp[2]}}.{{date_temp[1]}}.{{date_temp[0]}}{% endcapture %}
+      {% assign date = date | date: "%d.%m.%Y" %}
       {% assign name = conversation[0] | split:"-" %}
       {% assign name = name[1] | strip %}
       {% assign time_temp = conversation[0] | split:"-" %}

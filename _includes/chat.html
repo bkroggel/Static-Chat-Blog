@@ -9,14 +9,11 @@
       <h1>
         {{contact.name}}
       </h1>
-      {% if page.historys and contact.groupchat != true %}
+      {% if page.conversations and contact.groupchat != true %}
       <h2>zuletzt online 
         <span class="not-today">am</span>
-        <span id="date-chat" class="not-today">{% if page.historys %}{% assign historys = page.historys | sort: 'some_field' | reverse %}{% for history in historys %}{% if break_sure == true %}{% assign break_sure = false %}{% break %}{% else %}{% assign messages = history.messages | sort: 'some_field' | reverse %}{% for message in history.messages %}{% if {{message.name}} contains {{contact.short}} %}{{history.date}}{% assign break_sure = true %}{% break %}{% endif %}{% endfor %}{% endif %}{% endfor %}{% endif %}
-        </span>
+        <span id="date-chat" class="not-today">{% assign conversations = page.conversations | sort: 'some_field' | reverse %}{% for conversation_hash in conversations %}{% if should_break == true %}{% assign should_break = false %}{% break %}{% else %}{% for conversation in conversation_hash %}{% assign date = conversation[0] | split:"," %}{% assign date = date[0] %}{% assign date_temp = date | split: "." %}{% capture date %}{{date_temp[2]}}.{{date_temp[1]}}.{{date_temp[0]}}{% endcapture %}{% assign date = date | date: "%d.%m.%Y" %}{% assign name = conversation[0] | split:"-" %}{% assign name = name[1] | strip %}{% if name == contact.short %}{{date}}{% assign should_break = true %}{% break %}{% endif %}{% endfor %}{% endif %}{% endfor %}</span>
 
-        
-        </span>
         <span class="today">
           {% if page.historys %}
           {% assign historys = page.historys | sort: 'some_field' | reverse %}
