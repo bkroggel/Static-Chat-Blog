@@ -49,10 +49,10 @@ prose:
         field:
           element: "textarea"
           label: "Members of Groupconversation"
-          help: "Format: - SHORT.NAME "
+          help: "Format: - SHORT.NAME"
       - name: "conversations"
         field:
           element: "textarea"
-          label: Chat History
+          label: "Chat History"
           help: "Format: - dd.mm.yy, hh:mm - USERNAME: MESSAGE"
 
