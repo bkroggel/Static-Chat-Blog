@@ -41,10 +41,5 @@ prose:
           element: "text"
           value: "CURRENT_DATETIME"
           label: "Date"
-      - name: "conversations"
-        field:
-          element: "textarea"
-          label: "Chat Conversation"
-          help: "Format: - dd.mm.yy, hh:mm - USERNAME: MESSAGE"
 
 
