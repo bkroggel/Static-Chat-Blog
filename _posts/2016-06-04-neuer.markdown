@@ -2,7 +2,6 @@
 slug: neuer
 date: 2016-06-06 14:24:22
 members:
-
 conversations:
    - 04.08.15, 20:30 - neuer: Bin noch kurz Sport machen.
    - 04.08.15, 20:31 - neuer: Jo. Ich schaue :) es mir gleich mal an...
@@ -30,3 +29,5 @@ conversations:
    - 05.06.16, 12:31 - neuer: Ja?
    - 05.06.16, 12:35 - me: Tatsächlich?
 ---
+
+- no content - 
