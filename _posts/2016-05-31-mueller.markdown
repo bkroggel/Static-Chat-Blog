@@ -1,6 +1,8 @@
 ---
 slug: mueller
 
+members:
+
 conversations:
    - 04.08.15, 20:30 - mueller: Bin noch kurz Sport machen.
    - 04.08.15, 20:31 - mueller: Jo. Ich schaue :) es mir gleich mal an...

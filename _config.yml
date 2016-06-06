@@ -21,13 +21,11 @@ defaults:
 
 prose:
   rooturl: ''
-  siteurl: ''
-  relativeLinks: ''
   media: 'media/images'
   ignore:
-    - _includes
-    - _layouts
-    - _sass
+    - /_includes
+    - /_layouts
+    - /_sass
     - assets
     - .gitignore
     - _config.yml

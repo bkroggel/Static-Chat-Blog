@@ -1,5 +1,6 @@
 ---
 slug: neuer
+members:
 
 conversations:
    - 04.08.15, 20:30 - neuer: Bin noch kurz Sport machen.
