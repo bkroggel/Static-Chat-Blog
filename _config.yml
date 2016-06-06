@@ -45,6 +45,13 @@ prose:
         field:
           element: "multiselect"
           label: "Members of Conversation | Groupchat"
+          options:
+          alterable: true
+      - name: "conversations"
+        field:
+          element: "multiselect"
+          label: "Conversation History"
+          options:
           alterable: true
 
 
