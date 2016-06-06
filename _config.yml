@@ -32,10 +32,6 @@ prose:
     - index.html
   metadata:
     _posts:
-      - name: "title"
-        field: 
-          element: "text"
-          type: "text"
       - name: "slug"
         field: 
           element: "text"
