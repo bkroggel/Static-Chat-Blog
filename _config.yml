@@ -43,7 +43,7 @@ prose:
           label: "Date"
       - name: "members"
         field:
-          element: "textarea"
+          element: "text"
           label: "Members of Conversation | Groupchat"
           value: null
 
