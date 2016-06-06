@@ -48,9 +48,29 @@ prose:
           options:
           alterable: true
     _data:
+      - name: "title"
+        field:
+          element: "text"
+          label: Website Title
       - name: "about"
         field:
           element: "textarea"
           label: "About"
+      - name: "facebook"
+        field:
+          element: "text"
+          label: "Facebook"
+      - name: "twitter"
+        field:
+          element: "text"
+          label: "Twitter"
+      - name: "instagram"
+        field:
+          element: "text"
+          label: "Instagram"
+      - name: "profil_pic"
+        field:
+          element: "text"
+          label: "Profil Image"
 
 
