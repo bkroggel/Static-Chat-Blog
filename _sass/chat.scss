@@ -31,6 +31,7 @@
 .header-info {
   cursor: pointer;
   flex-grow: 1;
+  overflow: hidden;
   h2 {
     font-size: 13px;
     line-height: 18px;
@@ -39,9 +40,20 @@
     white-space: nowrap;
     text-align: left;
     margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .today {
     display: none;
+  }
+}
+
+.header-info h2.chat-members span {
+  &:after {
+    content:', '
+  }
+  &:last-of-type:after {
+    content:''
   }
 }
 

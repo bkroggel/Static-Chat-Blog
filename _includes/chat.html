@@ -18,6 +18,12 @@
           {% assign conversations = page.conversations | sort: 'some_field' | reverse %}{% for conversation_hash in conversations %}{% if should_break == true %}{% assign should_break = false %}{% break %}{% else %}{% for conversation in conversation_hash %}{% assign time_temp = conversation[0] | split:"-" %}{% assign time = time_temp[0] | rstrip | slice: -5, 5 %}{% assign name = conversation[0] | split:"-" %}{% assign name = name[1] | strip %}{% if name == contact.short %}heute {{time}}{% assign should_break = true %}{% break %}{% endif %}{% endfor %}{% endif %}{% endfor %}
         </span>
       </h2>
+      {% elsif contact.groupchat == true %}
+      <h2 class="chat-members">
+        {% for member in page.members  %}
+          <span>{{site.data.contacts[member]name}}</span>
+        {% endfor %}
+      </h2>
       {% endif %}
     </div>
     <div class="menu">
