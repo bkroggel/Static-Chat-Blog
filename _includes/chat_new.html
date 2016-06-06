@@ -10,7 +10,7 @@
       {% capture date %}{{date_temp[2]}}.{{date_temp[1]}}.{{date_temp[0]}}{% endcapture %}
       {% assign date = date | date: "%d.%m.%Y" %}
       {% assign name = conversation[0] | split:"-" %}
-      {% assign name = name[1] %}
+      {% assign name = name[1] | strip %}
       {% assign time_temp = conversation[0] | split:"-" %}
       {% assign time = time_temp[0] | rstrip | slice: -5, 5 %}
       
