@@ -31,5 +31,9 @@ prose:
     - _config.yml
     - index.html
   metadata:
-    
+    _posts:
+      - name: "slug"
+        field:
+          element: "text"
+
 
