@@ -47,30 +47,9 @@ prose:
           label: "Members of Conversation | Groupchat"
           options:
           alterable: true
-    _data:
-      - name: "title"
+      - name: "published"
         field:
-          element: "text"
-          label: Website Title
-      - name: "about"
-        field:
-          element: "textarea"
-          label: "About"
-      - name: "facebook"
-        field:
-          element: "text"
-          label: "Facebook"
-      - name: "twitter"
-        field:
-          element: "text"
-          label: "Twitter"
-      - name: "instagram"
-        field:
-          element: "text"
-          label: "Instagram"
-      - name: "profil_pic"
-        field:
-          element: "text"
-          label: "Profil Image"
+          element: "hidden"
+          value: true
 
 
