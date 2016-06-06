@@ -1,3 +1,4 @@
+---
 title: Your awesome title
 
 about: | # this means to ignore newlines:
@@ -10,3 +11,4 @@ twitter:
 instagram:
 
 profil_pic: cc.png
+---
