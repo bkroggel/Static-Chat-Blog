@@ -47,11 +47,10 @@ prose:
           label: "Members of Conversation | Groupchat"
           options:
           alterable: true
-      - name: "conversations"
+    _data:
+      - name: "about"
         field:
-          element: "multiselect"
-          label: "Conversation History"
-          options:
-          alterable: true
+          element: "textarea"
+          label: "About"
 
 
