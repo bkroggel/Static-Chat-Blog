@@ -37,6 +37,7 @@ prose:
           element: "text"
           label: "Name of Contact"
           help: "enter a short name which matches the _data counterpart"
+          value: ""
       - name: "date"
         field:
           element: "text"
@@ -48,9 +49,11 @@ prose:
           element: "textarea"
           label: "Members of Groupconversation"
           help: "Format: - SHORT.NAME"
+          value: ""
       - name: "conversations"
         field:
           element: "textarea"
           label: "Chat History"
           help: "Format: - dd.mm.yy, hh:mm - USERNAME: MESSAGE"
+          value: ""
 
