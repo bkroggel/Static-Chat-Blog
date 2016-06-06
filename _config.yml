@@ -41,5 +41,10 @@ prose:
           element: "text"
           value: "CURRENT_DATETIME"
           label: "Date"
+      - name: "members"
+        field:
+          element: "multiselect"
+          label: "Members of Conversation | Groupchat"
+          alterable: true
 
 
