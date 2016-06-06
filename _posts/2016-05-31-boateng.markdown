@@ -1,6 +1,6 @@
 ---
 slug: boateng
-date: 2016-06-05 21:52:41
+date: '2016-06-06 14:43 +0200'
 members:
 
 conversations:

@@ -1,13 +1,13 @@
 ---
 slug: mueller
-date: 2016-06-06 14:24:11
+date: '2016-06-06 14:44 +0200'
 members:
 
 conversations:
-   - '04.08.15, 20:30 - mueller': 'Bin noch kurz Sport machen.'
-   - '04.08.15, 20:31 - mueller': 'Jo. Ich schaue :) es mir gleich mal an...'
-   - '04.08.15, 20:31 - me': 'Jo. Ich schaue es mir gleich mal an...'
-
+  - '06.06.16, 14:45 - me': 'Echt stark!'
+  - '06.06.16, 14:46 - me': 'Absolut, sehr, sehr nice!'
+  - '06.06.16, 14:46 - mueller': 'Das ist ja toll, dass das jetzt funktioniert'
+  - '06.06.16, 14:46 - me': 'Absolut, sehr, sehr nice!'
 ---
 
 
