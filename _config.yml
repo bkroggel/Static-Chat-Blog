@@ -35,20 +35,20 @@ prose:
       - name: "title"
         field: 
           element: "text"
-          type: text
+          type: "text"
       - name: "slug"
         field: 
           element: "text"
           label: "Name of Contact"
           help: "enter a short name which matches the _data counterpart"
-          type: text
+          type: "text"
       - name: "date"
         field:
           element: "text"
           value: "CURRENT_DATETIME"
           label: "Date"
           help: "automatically added"
-          type: text
+          type: "text"
       - name: "members"
         field:
           element: "textarea"
