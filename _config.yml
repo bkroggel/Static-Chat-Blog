@@ -20,7 +20,7 @@ defaults:
       permalink: /:title/
 
 prose:
-  rooturl: '_posts'
+  rooturl: ''
   siteurl: ''
   relativeLinks: ''
   media: 'media/images'
@@ -42,7 +42,7 @@ prose:
       - name: "date"
         field:
           element: "text"
-          value: CURRENT_DATETIME
+          value: "CURRENT_DATETIME"
           label: "Date"
           help: "automatically added"
       - name: "members"
