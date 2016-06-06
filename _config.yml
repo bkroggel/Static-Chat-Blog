@@ -35,5 +35,11 @@ prose:
       - name: "slug"
         field:
           element: "text"
+          label: "Contact Name"
+      - name: "date"
+        field:
+          element: "text"
+          value: "CURRENT_DATETIME"
+          label: "Date"
 
 
