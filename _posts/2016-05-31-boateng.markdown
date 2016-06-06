@@ -1,7 +1,6 @@
 ---
 slug: boateng
 date: 2016-06-05 21:52:41
-
 members:
 
 conversations:
