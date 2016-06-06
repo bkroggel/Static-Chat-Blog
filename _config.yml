@@ -41,10 +41,5 @@ prose:
           element: "text"
           value: "CURRENT_DATETIME"
           label: "Date"
-      - name: "members"
-        field:
-          element: "text"
-          label: "Members of Conversation | Groupchat"
-          value: null
 
 
