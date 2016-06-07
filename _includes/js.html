@@ -29,7 +29,7 @@
     {% for post in site.posts %}
 
     $('#{{post.slug}}').click(function(){
-      $("#message-window").load("../{{post.slug}}/index.html");
+      $("#message-window").load("{{site.baseurl}}/{{post.slug}}/index.html");
     });
     {% endfor %}
     $('#face-icon').click(function(){
