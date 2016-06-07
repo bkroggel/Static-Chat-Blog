@@ -3,10 +3,9 @@
   $(document).ready(function(){
 
     {% for post in site.posts %}
-    {% assign contact = site.data.contacts[post.slug] %}
 
     $(function(){
-      var jekyllDate = $("#date-{{contact.short}}").text();
+      var jekyllDate = $("#date-{{post.slug}}").text();
       var date = jekyllDate.substring(0, 2);
       var month = jekyllDate.substring(3, 5);
       var year = jekyllDate.substring(6, 10);
@@ -16,8 +15,8 @@
       today.setHours(0,0,0,0);
       if(myDate.getTime() === today.getTime() ) {
         $(function(){
-          $(".first-line .date-{{contact.short}}").remove();
-          $(".first-line .list-today-{{contact.short}}").css("display", "inline-block");
+          $(".first-line .date-{{post.slug}}").remove();
+          $(".first-line .list-today-{{post.slug}}").css("display", "inline-block");
         });
       } else {
         $(function(){
@@ -28,9 +27,8 @@
     {% endfor %}
 
     {% for post in site.posts %}
-    {% assign contact = site.data.contacts[post.slug] %}
 
-    $('#{{contact.short}}').click(function(){
+    $('#{{post.slug}}').click(function(){
       $("#message-window").load("../{{post.slug}}/index.html");
     });
     {% endfor %}

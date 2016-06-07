@@ -12,8 +12,8 @@
   <div class="drawer-body">
     <div class="drawer-section">
       <div class="drawer-avatar avatar-background">
-        {% if contact.profil_pic %}
-        <img src="../media/profil_pic/{{contact.profil_pic}}" alt="{{contact.profil_pic}}">
+        {% if page.profil_pic %}
+        <img src="../media/profil_pic/{{page.profil_pic}}" alt="{{page.profil_pic}}">
         {% endif %}
       </div>
     </div>
@@ -22,30 +22,32 @@
         <p>Status</p>
       </div>
       <div class="drawer-section-body">
-        <p>{{contact.status | newline_to_br}}</p>
+        <p>{{page.status | newline_to_br}}</p>
       </div>
     </div>
-    {% if contact.groupchat == true %}
+    {% if page.members %}
       <div class="drawer-section drawer-content">
         <div class="drawer-section-title">
           <p>Members</p>
         </div>
         <div class="drawer-section-body">
           {% for member in page.members %}
-            {% assign chat_member = site.data.contacts[member] %}
+            {% assign participants = site.posts | where: 'slug', member %}
+            {% for participant in participants %}
             <div class="chat">
               <div class="chat-icon">
-                {% if chat_member.profil_pic %}
-                <img src="../media/profil_pic/{{chat_member.profil_pic}}" alt="{{chat_member.profil_pic}}">
+                {% if participant.profil_pic %}
+                <img src="../media/profil_pic/{{participant.profil_pic}}" alt="{{participant.profil_pic}}">
                 {% endif %}
               </div>
               <div class="content">
                 <div class="first-line">
-                  <h1>{{chat_member.name}}</h1>
+                  <h1>{{participant.name}}</h1>
                 </div>
-                  <p>{{chat_member.status}}</p>
+                  <p>{{participant.status}}</p>
               </div>
             </div>
+            {% endfor %}
           {% endfor %}
         </div>
       </div>
@@ -55,14 +57,14 @@
         <p>Social Media</p>
       </div>
       <div class="drawer-section-body drawer-social">
-        {% if contact.facebook %}
-        <a href="{{contact.facebook}}"><span class="fa fa-facebook-official"></span></a>
+        {% if page.facebook %}
+        <a href="{{page.facebook}}"><span class="fa fa-facebook-official"></span></a>
         {% endif %}
-        {% if contact.twitter %}
-        <a href="{{contact.twitter}}"><span class="fa fa-twitter"></span></a>
+        {% if page.twitter %}
+        <a href="{{page.twitter}}"><span class="fa fa-twitter"></span></a>
         {% endif %}
-        {% if contact.instagram %}
-        <a href="{{contact.instagram}}"><span class="fa fa-instagram"></span></a>
+        {% if page.instagram %}
+        <a href="{{page.instagram}}"><span class="fa fa-instagram"></span></a>
         {% endif %}
       </div>
     </div>

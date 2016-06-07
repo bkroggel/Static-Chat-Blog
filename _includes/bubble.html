@@ -1,7 +1,10 @@
 <div class="bubble-frame">
   <div class="bubble {% if {{name}} == 'me' %}bubble-out{% else %}bubble-in{% endif %}">
-    {% if contact.groupchat == true %}
-      <h1>{{site.data.contacts[name]name}}</h1>
+    {% if page.members %}
+      {% assign participants = site.posts | where: 'slug', name %}
+      {% for participant in participants %}
+        <h1>{{ participant.name }}</h1>
+      {% endfor %}
     {% endif %}
     {% assign message_img_check = message | slice: 0, 3 %}
     {% if message_img_check == "img" %}
