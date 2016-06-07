@@ -8,7 +8,7 @@
     {% endif %}
     {% assign message_img_check = message | slice: 0, 3 %}
     {% if message_img_check == "img" %}
-          <img src="../media/images/{{ message | remove_first: "img "}}" alt="{{ message | remove_first: "img "}}">
+          <img src="{{site.baseurl}}/media/images/{{ message | remove_first: "img "}}" alt="{{ message | remove_first: "img "}}">
       <h3>{{time}}</h3>
     {% else %}
     <p>{{message}}</p>

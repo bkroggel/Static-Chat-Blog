@@ -13,7 +13,7 @@
     <div class="drawer-section">
       <div class="drawer-avatar avatar-background">
         {% if page.profil_pic %}
-        <img src="../media/profil_pic/{{page.profil_pic}}" alt="{{page.profil_pic}}">
+        <img src="{{site.baseurl}}/media/profil_pic/{{page.profil_pic}}" alt="{{page.profil_pic}}">
         {% endif %}
       </div>
     </div>
@@ -37,7 +37,7 @@
             <div class="chat">
               <div class="chat-icon">
                 {% if participant.profil_pic %}
-                <img src="../media/profil_pic/{{participant.profil_pic}}" alt="{{participant.profil_pic}}">
+                <img src="{{site.baseurl}}/media/profil_pic/{{participant.profil_pic}}" alt="{{participant.profil_pic}}">
                 {% endif %}
               </div>
               <div class="content">
