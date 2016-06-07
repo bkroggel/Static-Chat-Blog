@@ -51,8 +51,9 @@ body {
   flex-direction: row;
   overflow: visible;
   overflow-x: scroll;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.06),0 2px 5px 0 rgba(0,0,0,.2);
   @media (min-width: 600px) {
-    overflow-x: visible;
+    overflow: hidden;
   }
   @media (min-width: 1200px) {
     margin: 20px 30px;
