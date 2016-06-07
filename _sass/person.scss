@@ -1,3 +1,23 @@
+@keyframes wap-drawer {
+  0%, 25% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes wap-image {
+  0%, 20% {
+    transform: scale(0,0);
+  }
+  100% {
+    transform: scale 1,1;
+  }
+}
+
 .person {
  width: 0%;
  height: 100%;
@@ -18,7 +38,13 @@
     .chat-window {
       width: 60%;
     }
-  } 
+  }
+  .drawer-content {
+    animation: wap-drawer 1s cubic-bezier(.1,.82,.25,1);
+  }
+  .drawer-avatar {
+    animation: wap-image 750ms cubic-bezier(.1,.82,.25,1)
+  }
 }
 
 .header-close {

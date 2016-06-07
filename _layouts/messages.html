@@ -81,14 +81,14 @@ $(function(){
 });
 
 {% if page.members %}
-      {% for member in page.members %}
-        {% assign participants = site.posts | where: 'slug', member %}
-        {% for participant in participants %}
-          $('#group-member-{{participant.slug}}').click(function(){
-            $("#message-window").load("{{site.baseurl}}/{{participant.slug}}/index.html");
-          });
-        {% endfor %}
-      {% endfor %}
+  {% for member in page.members %}
+    {% assign participants = site.posts | where: 'slug', member %}
+    {% for participant in participants %}
+      $('#group-member-{{participant.slug}}').click(function(){
+        $("#message-window").load("{{site.baseurl}}/{{participant.slug}}/index.html");
+      });
+    {% endfor %}
+  {% endfor %}
 {% endif %}
 
 //componentHandler.upgradeAllRegistered();
