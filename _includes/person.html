@@ -52,6 +52,17 @@
         </div>
       </div>
     {% endif %}
+    {% assign content = page.content | strip_newlines %}
+    {% if content != "" %}
+      <div class="drawer-section drawer-content">
+        <div class="drawer-section-title">
+          <p>About</p>
+        </div>
+        <div class="drawer-section-body drawer-text">
+          {{ page.content }}
+        </div>
+      </div>
+    {% endif %}
     <div class="drawer-section drawer-content">
       <div class="drawer-section-title">
         <p>Social Media</p>
