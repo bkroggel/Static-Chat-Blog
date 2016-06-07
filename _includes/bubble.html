@@ -1,3 +1,13 @@
+<style>
+  .bubble-frame:last-of-type .bubble-in:before {
+    background-image: url({{site.baseurl}}/assets/img/nose-in.png);
+  }
+
+  .bubble-frame:last-of-type .bubble-out:before {
+    background-image: url({{site.baseurl}}/assets/img/nose-out.png);
+  }
+</style>
+
 <div class="bubble-frame">
   <div class="bubble {% if {{name}} == 'me' %}bubble-out{% else %}bubble-in{% endif %}">
     {% if page.members %}
