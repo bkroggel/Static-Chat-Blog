@@ -34,7 +34,7 @@
           {% for member in page.members %}
             {% assign participants = site.posts | where: 'slug', member %}
             {% for participant in participants %}
-            <div class="chat">
+            <div class="chat" id="group-member-{{participant.slug}}">
               <div class="chat-icon">
                 {% if participant.profil_pic %}
                 <img src="{{site.baseurl}}/media/profil_pic/{{participant.profil_pic}}" alt="{{participant.profil_pic}}">
