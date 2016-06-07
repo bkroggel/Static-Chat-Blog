@@ -32,24 +32,63 @@ prose:
     - index.html
   metadata:
     _posts:
+      - name: "published"
+        field:
+          element: "hidden"
+          value: true
+    #  - name: "title"
+    #    field:
+    #      element: "text"
+    #      label: "Title"
+    #      help: "just for author to identify posts"
       - name: "slug"
         field:
           element: "text"
-          label: "Contact Name"
+          label: "User identifier"
+          help: "use this name in chat conversation - no spaces or special characters"
       - name: "date"
         field:
           element: "text"
           value: "CURRENT_DATETIME"
           label: "Date"
+          help: "no need to change - just for order of chat conversations"
+      - name: "name"
+        field:
+          element: "text"
+          label: "Contact Name"
+          help: "Display name of chat e.g John Smith or Best Group Ever"
+      - name: "status"
+        field:
+          element: "textarea"
+          label: "Status"
+          help: "add status message for user"
+      - name: "profil_pic"
+        field:
+          element: "text"
+          label: "Profil Picture"
+          help: "enter the full name of the profil pic placed in the media/profil_pic folder e.g. smith.jpg"
+      - name: "twitter"
+        field:
+          element: "text"
+          label: "Twitter"
+          help: "option to add a twitter link for this person"
+      - name: "facebook"
+        field:
+          element: "text"
+          label: "Facebook"
+          help: "option to add a facebook link for this person"
+      - name: "instagram"
+        field:
+          element: "text"
+          label: "Instagram"
+          help: "option to add a instagram link for this person"
       - name: "members"
         field:
           element: "multiselect"
           label: "Members of Conversation | Groupchat"
           options:
           alterable: true
-      - name: "published"
-        field:
-          element: "hidden"
-          value: true
+          help: "add participants if conversation is a group chat | IMPORTANT: individual users must already have a individual chat instance | use their User identifier"
+      
 
 
