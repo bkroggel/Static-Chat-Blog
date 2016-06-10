@@ -10,3 +10,8 @@ twitter:
 instagram:
 
 profil_pic: cc.png
+
+# tooltips
+# left
+tooltip_left: you are not allowed to participate in this conversation
+tooltip_right: file upload currently not available

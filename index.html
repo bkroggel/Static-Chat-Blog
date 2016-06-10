@@ -48,7 +48,7 @@
                     <path opacity=".5" fill-rule="evenodd" clip-rule="evenodd" d="M19.005 3.175H4.675C3.64 3.175 3 3.79 3 4.82v16.2l3.544-3.514h12.46c1.034 0 2.065-1.06 2.065-2.093V4.82c-.004-1.03-1.035-1.645-2.067-1.645zm-4.99 9.87H7.042V11.1h6.976v1.944zm3-4H7.042V7.1h9.976v1.944z"/>
                   </svg>
                 </span>
-                <span for="new-message" class="mdl-tooltip">Sorry - currently no message-option available</span>
+                <span for="new-message" class="mdl-tooltip">{{site.data.about.tooltip_left}}</span>
               </button>
               
               <button id="menu1" class="mdl-button mdl-js-button">
@@ -60,10 +60,10 @@
               </button>
               <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                   for="menu1">
-                <li class="mdl-menu__item">Some Action</li>
-                <li class="mdl-menu__item">Another Action</li>
-                <li disabled class="mdl-menu__item">Disabled Action</li>
-                <li class="mdl-menu__item">Yet Another Action</li>
+                <li disabled class="mdl-menu__item">Neue Gruppe</li>
+                <li id="menu-status" class="mdl-menu__item">Profil und Status</li>
+                <li disabled class="mdl-menu__item">Einstellungen</li>
+                <li disabled class="mdl-menu__item">Abmelden</li>
               </ul>
             </div>
           </header>

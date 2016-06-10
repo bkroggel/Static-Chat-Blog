@@ -72,12 +72,21 @@ $(document).ready(function(){
 });
 
 $(function(){
-  $("#messagebox").focus().keypress(function(event) {
-      if (event.keyCode == 13 && !event.shiftKey) {
-        $(this).val("");
-        event.preventDefault();
-      }
+  if($(window).width() >= 500) {
+    $("#messagebox").focus().keypress(function(event) {
+        if (event.keyCode == 13 && !event.shiftKey) {
+          $(this).val("");
+          event.preventDefault();
+        }
     });
+  } else {
+    $("#messagebox").keypress(function(event) {
+        if (event.keyCode == 13 && !event.shiftKey) {
+          $(this).val("");
+          event.preventDefault();
+        }
+    });
+  }
 });
 
 {% if page.members %}
