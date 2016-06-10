@@ -14,12 +14,12 @@
       {% assign time_temp = conversation[0] | split:"-" %}
       {% assign time = time_temp[0] | rstrip | slice: -5, 5 %}
       
-      <div class="bubble-row">
+      <div class="bubble-row {% if page.fake_chat == true %}fake-row{% endif %}">
         <div class="bubble date-lable">
           <h1>{{date}}</h1>
         </div>
       </div>
-      <div class="bubble-row">
+      <div class="bubble-row {% if page.fake_chat == true %}fake-row{% endif %}">
         {% include bubble.html %}
 
 
@@ -49,7 +49,7 @@
     {% elsif name != name_old and date == date_old %}
       
       </div>
-      <div class="bubble-row">
+      <div class="bubble-row {% if page.fake_chat == true %}fake-row{% endif %}">
         {% include bubble.html %}
 
       {% assign date_old = date %}
@@ -58,12 +58,12 @@
     {% elsif date != date_old %}
       
       </div>
-      <div class="bubble-row">
+      <div class="bubble-row {% if page.fake_chat == true %}fake-row{% endif %}">
         <div class="bubble date-lable">
           <h1>{{date}}</h1>
         </div>
       </div>
-      <div class="bubble-row">
+      <div class="bubble-row {% if page.fake_chat == true %}fake-row{% endif %}">
         {% include bubble.html %}
 
       {% assign date_old = date %}
@@ -73,12 +73,12 @@
     {% elsif name != name_old and date != date_old %}
       
       </div>
-      <div class="bubble-row">
+      <div class="bubble-row {% if page.fake_chat == true %}fake-row{% endif %}">
         <div class="bubble date-lable">
           <h1>{{date}}</h1>
         </div>
       </div>
-      <div class="bubble-row">
+      <div class="bubble-row {% if page.fake_chat == true %}fake-row{% endif %}">
         {% include bubble.html %}
 
       {% assign date_old = date %}

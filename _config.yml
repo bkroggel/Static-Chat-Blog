@@ -21,7 +21,7 @@ defaults:
 
 prose:
   rooturl: ''
-  media: 'media'
+  media: 'media/images'
   ignore:
     - _includes
     - _layouts
@@ -82,6 +82,12 @@ prose:
           element: "text"
           label: "Instagram"
           help: "option to add a instagram link for this person"
+      - name: "fake_chat"
+        field:
+          element: "checkbox"
+          label: "Fake Conversation"
+          help: "Toggle if you are not a member of the conversation"
+          value: false
       - name: "members"
         field:
           element: "multiselect"

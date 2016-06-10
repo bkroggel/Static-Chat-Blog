@@ -1,6 +1,6 @@
 <section class="list" >
   {% for post in site.posts %}
-    <div class="chat" id="{{post.slug}}">
+    <div class="chat {% if post.conversations == nil %} no-chat{% endif %}" id="{{post.slug}}">
       <div class="chat-icon">
         {% if post.profil_pic %}
         <img src="{{site.baseurl}}/media/profil_pic/{{post.profil_pic}}" alt="{{post.profil_pic}}">
