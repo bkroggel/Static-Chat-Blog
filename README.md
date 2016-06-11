@@ -35,5 +35,11 @@ Make sure that you are allowed to contribute to the given project before heading
 
 1. Head over to http://prose.io/#\[github-username]/[repository-name]
 2. switch to `_posts`
-3. ​
+3.  Use the button in the upper right corner to create a new blogpost![new](assets/img/instructions/new.png)
+4. Take a look at the section in head of the new site and change `your-filename` of `_posts/2016-06-11-your-filename.md` to your title of the site
+   ![title](assets/img/instructions/title.png)
+   *DON'T* change the `_post/` or the actual date `2016-06-11` part
+5. If you'd like to show a About section in the Info are of your chat conversation you could now enter the desired text in the area below. Otherwise please delet the placeholder text.
+   ![content](assets/img/instructions/content.png)
+6.  ![menu_yaml](assets/img/instructions/menu_yaml.png) Use the marked button to open up the settings section where you could add a all of the needed information for the individual chat view as well as the actual conversation. 
 
