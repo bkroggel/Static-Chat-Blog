@@ -93,7 +93,7 @@ Make sure that you are allowed to contribute to the given project before heading
    ```
 
 8. After entering all your content and updating your blog successfully you just need to safe the new post.
-   Click on the floppy disk symbol and "commit" your update.
+   Click on the floppy disk symbol and "commit" your update.  
     ![commit](assets/img/instructions/commit.png) 
 
 9. You're done! :)
@@ -143,3 +143,9 @@ The `_data` section in your blog allows you to add some data like the name or so
 | profil_pic    | add the profit_pic like explained above  |
 | tooltip_left  | the text that gets displayed if you move your mouse above the little messaging symbol in the upper left corner |
 | tooltip_right | the text that gets displayed if you move your mouse above the little paperclip symbol in the upper right corner |
+
+
+
+#### Various
+
+* your chat conversations won't show up in your chat list on the left hand side if there are no messages in the chat history
