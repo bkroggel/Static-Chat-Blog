@@ -1,18 +1,16 @@
-{% if page.conversations and page.wa_direct == true %}
-{% for conversation_hash in page.conversations %}
+{% if page.conversations and page.wa_direct == false %}
+{% for conversation in page.conversations %}
   {% if forloop.first %}
 
-    {% for conversation in conversation_hash %}
-      {% assign message = conversation[1] %}
-      {% assign date = conversation[0] | split:"," %}
-      {% assign date = date[0] %}
+    
+      {% assign message = conversation.message %}
+      {% assign date = conversation.date %}
       {% assign date_temp = date | split: "." %}
       {% capture date %}{{date_temp[2]}}.{{date_temp[1]}}.{{date_temp[0]}}{% endcapture %}
       {% assign date = date | date: "%d.%m.%Y" %}
-      {% assign name = conversation[0] | split:"-" %}
-      {% assign name = name[1] | strip %}
-      {% assign time_temp = conversation[0] | split:"-" %}
-      {% assign time = time_temp[0] | rstrip | slice: -5, 5 %}
+      {% assign name_temp = conversation.user %}
+      {% assign name = name_temp | strip %}
+      {% assign time = conversation.time %}
       
       <div class="bubble-row {% if page.fake_chat == true %}fake-row{% endif %}">
         <div class="bubble date-lable">
@@ -25,20 +23,18 @@
 
       {% assign date_old = date %}
       {% assign name_old = name %}
-    {% endfor %}
+    
   {% else %}
-    {% for conversation in conversation_hash %}
-      {% assign message = conversation[1] %}
-      {% assign date = conversation[0] | split:"," %}
-      {% assign date = date[0] | strip %}
+    
+      {% assign message = conversation.message %}
+      {% assign date = conversation.date %}
       {% assign date_temp = date | split: "." %}
       {% capture date %}{{date_temp[2]}}.{{date_temp[1]}}.{{date_temp[0]}}{% endcapture %}
       {% assign date = date | date: "%d.%m.%Y" %}
-      {% assign name = conversation[0] | split:"-" %}
-      {% assign name = name[1] | strip %}
-      {% assign time_temp = conversation[0] | split:"-" %}
-      {% assign time = time_temp[0] | rstrip | slice: -5, 5 %}
-    {% endfor %}
+      {% assign name_temp = conversation.user %}
+      {% assign name = name_temp | strip %}
+      {% assign time = conversation.time %}
+    
     {% if name == name_old and date == date_old %}
       
         {% include bubble.html %}
