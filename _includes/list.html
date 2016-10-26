@@ -10,15 +10,98 @@
         <div class="first-line">
           <h1>{{post.name}}</h1>
           <h2>
-            <span class="date-{{post.slug}}" id="date-{{post.slug}}">{% if post.conversations %}{% assign conversations = post.conversations | sort: 'some_field' | reverse %}{% for conversation_hash in conversations %}{% if should_break == true %}{% assign should_break = false %}{% break %}{% else %}{% for conversation in conversation_hash %}{% assign date = conversation[0] | split:"," %}{% assign date = date[0] %}{% assign date_temp = date | split: "." %}{% capture date %}{{date_temp[2]}}.{{date_temp[1]}}.{{date_temp[0]}}{% endcapture %}{% assign date = date | date: "%d.%m.%Y" %}{% assign name = conversation[0] | split:"-" %}{% assign name = name[1] | strip %}{% if name == post.slug %}{{date}}{% assign should_break = true %}{% break %}{% endif %}{% endfor %}{% endif %}{% endfor %}{% endif %}
+            <span class="date-{{post.slug}}" id="date-{{post.slug}}">
+            {% if post.conversations and post.wa_direct == true %}
+              {% assign conversations = post.conversations | sort: 'some_field' | reverse %}
+              {% for conversation_hash in conversations %}
+                {% if should_break_date == true %}
+                  {% assign should_break_date = false %}
+                  {% break %}
+                {% else %}
+                  {% for conversation in conversation_hash %}
+                    {% assign date = conversation[0] | split:"," %}
+                    {% assign date = date[0] %}
+                    {% assign date_temp = date | split: "." %}
+                    {% capture date %}
+                      {{date_temp[2]}}.{{date_temp[1]}}.{{date_temp[0]}}
+                    {% endcapture %}
+                    {% assign date = date | date: "%d.%m.%Y" %}
+                    {% assign name = conversation[0] | split:"-" %}
+                    {% assign name = name[1] | strip %}
+                    {% if name == post.slug %}
+                      {{date}}
+                      {% assign should_break_date = true %}
+                      {% break %}
+                    {% endif %}
+                  {% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% elsif post.conversations and post.wa_direct == false %}
+              {% assign conversations = post.conversations | sort: 'some_field' | reverse %}
+              {% for conversation in conversations %}
+                {% if should_break_date == true %}
+                  {% assign should_break_date = false %}
+                  {% break %}
+                {% else %}
+                  {% assign date = conversation.date %}
+                  {% assign date_temp = date | split: "." %}
+                  {% capture date %}
+                    {{date_temp[2]}}.{{date_temp[1]}}.{{date_temp[0]}}
+                  {% endcapture %}
+                  {% assign date = date | date: "%d.%m.%Y" %}
+                  {% assign name = conversation.user | strip %}
+                  {% if name == post.slug %}
+                    {{date}}
+                    {% assign should_break_date = true %}
+                    {% break %}
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
             </span>
             <span style="display: none" class="list-today-{{post.slug}}">
-              {% if post.conversations %}{% assign conversations = post.conversations | sort: 'some_field' | reverse %}{% for conversation_hash in conversations %}{% if should_break == true %}{% assign should_break = false %}{% break %}{% else %}{% for conversation in conversation_hash %}{% assign time_temp = conversation[0] | split:"-" %}{% assign time = time_temp[0] | rstrip | slice: -5, 5 %}{% assign name = conversation[0] | split:"-" %}{% assign name = name[1] | strip %}{% if name == post.slug %}{{time}}{% assign should_break = true %}{% break %}{% endif %}{% endfor %}{% endif %}{% endfor %}{% endif %}
+              {% if post.conversations and post.wa_direct == true %}
+                {% assign conversations = post.conversations | sort: 'some_field' | reverse %}
+                {% for conversation_hash in conversations %}
+                  {% if should_break_time == true %}
+                    {% assign should_break_time = false %}
+                    {% break %}
+                  {% else %}
+                    {% for conversation in conversation_hash %}
+                      {% assign time_temp = conversation[0] | split:"-" %}
+                      {% assign time = time_temp[0] | rstrip | slice: -5, 5 %}
+                      {% assign name = conversation[0] | split:"-" %}
+                      {% assign name = name[1] | strip %}
+                      {% if name == post.slug %}
+                        {{time}}
+                        {% assign should_break_time = true %}
+                        {% break %}
+                      {% endif %}
+                    {% endfor %}
+                  {% endif %}
+                {% endfor %}
+              {% elsif post.conversations and post.wa_direct == false %}
+                {% assign conversations = post.conversations | sort: 'some_field' | reverse %}
+                {% for conversation in conversations %}
+                  {% if should_break_time == true %}
+                    {% assign should_break_time = false %}
+                    {% break %}
+                  {% else %}
+                    {% assign time = conversation.time %}
+                    {% assign name = conversation.user | strip %}
+                    {% if name == post.slug %}
+                      {{time}}
+                      {% assign should_break_time = true %}
+                      {% break %}
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
             </span>
           </h2>
         </div>
         <p>
-          {% if post.conversations %}{% assign conversations = post.conversations | sort: 'some_field' | reverse %}{% for conversation_hash in conversations limit: 1 %}{% for conversation in conversation_hash %}{% assign message = conversation[1] %} {{message}}{% endfor %}{% endfor %}{% endif %}
+          {% if post.conversations and post.wa_direct == true %}{% assign conversations = post.conversations | sort: 'some_field' | reverse %}{% for conversation_hash in conversations limit: 1 %}{% for conversation in conversation_hash %}{% assign message = conversation[1] %} {{message | strip}}{% endfor %}{% endfor %}{% elsif post.conversations and post.wa_direct == false %}{% assign conversations = post.conversations | sort: 'some_field' | reverse %}{% for conversation in conversations limit: 1 %}{{conversation.message | strip}}{% endfor %}{% endif %}
         </p>
       </div>
     </div>

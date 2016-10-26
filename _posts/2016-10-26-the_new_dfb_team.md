@@ -10,14 +10,14 @@ members:
   - neuer
 custom_conversations: true
 wa_direct: false
-fake_chat: false
+fake_chat: true
 conversations:
   -  date: 05.06.16
      time: "20:20"
      user: me
      message: Jetzt geht das aber, oder?
-  -  date: 06.06.16
-     time: "17:25"
+  -  date: 05.06.16
+     time: "21:25"
      user: mueller
      message: Warum denn nicht?
   -  date: 07.06.16
